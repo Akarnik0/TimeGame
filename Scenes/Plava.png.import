@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw7ldjv64jle6"
-path="res://.godot/imported/poljecvijet2.png-5553410c29a64570619b6a7a2e1060f8.ctex"
+uid="uid://bqk4yh8jfwwg3"
+path="res://.godot/imported/Plava.png-c4cbe9937ab18780e27bc11d34f6567f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileAssets/poljecvijet2.png"
-dest_files=["res://.godot/imported/poljecvijet2.png-5553410c29a64570619b6a7a2e1060f8.ctex"]
+source_file="res://Scenes/Plava.png"
+dest_files=["res://.godot/imported/Plava.png-c4cbe9937ab18780e27bc11d34f6567f.ctex"]
 
 [params]
 

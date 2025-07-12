@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck2u8qq1vcd75"
-path="res://.godot/imported/poljecvijet.png-841a657eb29b7975276cd2a73ea31283.ctex"
+uid="uid://dpy6um7i5jvtv"
+path="res://.godot/imported/Crvena.png-ef4cb53eb4201f38806466bad375a602.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileAssets/poljecvijet.png"
-dest_files=["res://.godot/imported/poljecvijet.png-841a657eb29b7975276cd2a73ea31283.ctex"]
+source_file="res://Assets/TileAssets/Crvena.png"
+dest_files=["res://.godot/imported/Crvena.png-ef4cb53eb4201f38806466bad375a602.ctex"]
 
 [params]
 
