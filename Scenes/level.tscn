@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=4 uid="uid://cnx16dmfkhusg"]
+
+[ext_resource type="Texture2D" uid="uid://bw7ldjv64jle6" path="res://Assets/TileAssets/poljecvijet2.png" id="1_k5f4k"]
+[ext_resource type="Texture2D" uid="uid://ck2u8qq1vcd75" path="res://Assets/TileAssets/poljecvijet.png" id="2_6phgx"]
+[ext_resource type="Script" uid="uid://v0w8xmff0klu" path="res://Scripts/CharacterScripts/CharacterMovement.gd" id="3_81xng"]
+[ext_resource type="Texture2D" uid="uid://b04kyohlxbp22" path="res://Assets/CharacterAssets/WalterWeiss.png" id="4_wqkje"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_81xng"]
+texture = ExtResource("1_k5f4k")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqkje"]
+texture = ExtResource("2_6phgx")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0f350"]
+sources/0 = SubResource("TileSetAtlasSource_81xng")
+sources/1 = SubResource("TileSetAtlasSource_wqkje")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0f350"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wqkje")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Level" type="Node2D"]
+
+[node name="Grid" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD9//3/AAAAAAAAAAD9//7/AAAAAAEAAAD9////AAAAAAIAAAD+//3/AAABAAAAAAD+//7/AAABAAEAAAD+////AAABAAIAAAD///3/AAACAAAAAAD///7/AAACAAEAAAD/////AAACAAIAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAEAAAD9/wIAAAAAAAIAAAD+/wAAAAABAAAAAAD+/wEAAAABAAEAAAD+/wIAAAABAAIAAAD//wAAAAACAAAAAAD//wEAAAACAAEAAAD//wIAAAACAAIAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAIAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAACAAAAAAACAAAAAAACAAEAAAACAAEAAAACAAIAAAACAAIAAAAAAP3/AAAAAAAAAAAAAP7/AAAAAAEAAAAAAP//AAAAAAIAAAABAP3/AAABAAAAAAABAP7/AAABAAEAAAABAP//AAABAAIAAAACAP3/AAACAAAAAAACAP7/AAACAAEAAAACAP//AAACAAIAAAD6//3/AAAAAAAAAAD6//7/AAAAAAEAAAD6////AAAAAAIAAAD7//3/AAABAAAAAAD7//7/AAABAAEAAAD7////AAABAAIAAAD8//3/AAACAAAAAAD8//7/AAACAAEAAAD8////AAACAAIAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAEAAAD6/wIAAAAAAAIAAAD7/wAAAAABAAAAAAD7/wEAAAABAAEAAAD7/wIAAAABAAIAAAD8/wAAAAACAAAAAAD8/wEAAAACAAEAAAD8/wIAAAACAAIAAAD6/wMAAAAAAAAAAAD6/wQAAAAAAAEAAAD6/wUAAAAAAAIAAAD7/wMAAAABAAAAAAD7/wQAAAABAAEAAAD7/wUAAAABAAIAAAD8/wMAAAACAAAAAAD8/wQAAAACAAEAAAD8/wUAAAACAAIAAAD9/wMAAAAAAAAAAAD9/wQAAAAAAAEAAAD9/wUAAAAAAAIAAAD+/wMAAAABAAAAAAD+/wQAAAABAAEAAAD+/wUAAAABAAIAAAD//wMAAAACAAAAAAD//wQAAAACAAEAAAD//wUAAAACAAIAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAIAAAABAAMAAAABAAAAAAABAAQAAAABAAEAAAABAAUAAAABAAIAAAACAAMAAAACAAAAAAACAAQAAAACAAEAAAACAAUAAAACAAIAAAADAAAAAAAAAAAAAAADAAEAAAAAAAEAAAADAAIAAAAAAAIAAAAEAAAAAAABAAAAAAAEAAEAAAABAAEAAAAEAAIAAAABAAIAAAAFAAAAAAACAAAAAAAFAAEAAAACAAEAAAAFAAIAAAACAAIAAAADAP3/AAAAAAAAAAADAP7/AAAAAAEAAAADAP//AAAAAAIAAAAEAP3/AAABAAAAAAAEAP7/AAABAAEAAAAEAP//AAABAAIAAAAFAP3/AAACAAAAAAAFAP7/AAACAAEAAAAFAP//AAACAAIAAAADAAMAAAAAAAAAAAADAAQAAAAAAAEAAAADAAUAAAAAAAIAAAAEAAMAAAABAAAAAAAEAAQAAAABAAEAAAAEAAUAAAABAAIAAAAFAAMAAAACAAAAAAAFAAQAAAACAAEAAAAFAAUAAAACAAIAAAA=")
+tile_set = SubResource("TileSet_0f350")
+
+[node name="Character" type="CharacterBody2D" parent="."]
+position = Vector2(0, 1)
+script = ExtResource("3_81xng")
+
+[node name="CharacterCollisionShape" type="CollisionShape2D" parent="Character"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character"]
+sprite_frames = SubResource("SpriteFrames_0f350")
+
+[node name="Camera2D" type="Camera2D" parent="Character"]
+position = Vector2(0, -1)
