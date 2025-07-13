@@ -5,9 +5,16 @@ extends Area2D
 @export var sprite: Texture
 var opened = false
 
+func SnapBoxToGrid():
+	var tile_size = $"../Grid".tile_set.tile_size.x
+	position = position.snapped(Vector2.ONE * tile_size) + Vector2.ONE * tile_size / 2
+
 func _ready():
 	$Sprite2D.texture = sprite
 	connect("body_entered", Callable(self, "_on_body_entered"))
+	
+	SnapBoxToGrid()
+	
 func _on_body_entered(body):
 	if opened:
 		return

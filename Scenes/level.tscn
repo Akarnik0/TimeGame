@@ -73,11 +73,16 @@ zoom = Vector2(3, 3)
 [node name="RayCast2D" type="RayCast2D" parent="Character"]
 
 [node name="Key" parent="." instance=ExtResource("9_qxfql")]
-position = Vector2(-67, 44)
+position = Vector2(-66, 51)
 item_name = "Red"
 sprite_texture = ExtResource("10_ha31o")
 
 [node name="Box" parent="." instance=ExtResource("11_pa6b8")]
 position = Vector2(-67, 8)
 required_key = "Red"
+sprite = ExtResource("10_ha31o")
+
+[node name="Box2" parent="." instance=ExtResource("11_pa6b8")]
+position = Vector2(-68, 93)
+required_key = "green"
 sprite = ExtResource("10_ha31o")
