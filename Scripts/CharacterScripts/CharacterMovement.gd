@@ -110,3 +110,8 @@ func _on_InteractArea_area_entered(area):
 func _on_InteractArea_area_exited(area):
 	if interactables.has(area):
 		interactables.erase(area)
+
+func remove_item(item_name: String):
+	if item_name in inventory:
+		inventory.erase(item_name)
+		print("Removed item: ", item_name)
