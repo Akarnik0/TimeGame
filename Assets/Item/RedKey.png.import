@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqk4yh8jfwwg3"
-path="res://.godot/imported/Plava.png-c4cbe9937ab18780e27bc11d34f6567f.ctex"
+uid="uid://bmxo4e3orejf7"
+path="res://.godot/imported/RedKey.png-0bfd691e34d4b4d5024064b8af69c583.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Plava.png"
-dest_files=["res://.godot/imported/Plava.png-c4cbe9937ab18780e27bc11d34f6567f.ctex"]
+source_file="res://Assets/Item/RedKey.png"
+dest_files=["res://.godot/imported/RedKey.png-0bfd691e34d4b4d5024064b8af69c583.ctex"]
 
 [params]
 

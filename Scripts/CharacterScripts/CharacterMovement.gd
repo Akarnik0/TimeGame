@@ -41,8 +41,9 @@ func Move(Direction):
 	ray.force_raycast_update()
 
 	if !ray.is_colliding():
-		position += Inputs[Direction] * tile_size
 		var LastPosition = position
+		position += Inputs[Direction] * tile_size
+		
 		if position != SameRoomPosition && IsInDoor == true:
 			GlobalLevel.Turns += 1
 			print(GlobalLevel.Turns)
@@ -67,3 +68,15 @@ func _unhandled_input(event: InputEvent):
 	for Direction in Inputs.keys():
 		if event.is_action_pressed(Direction):
 			Move(Direction)
+
+var inventory: Array[String] = []
+
+func add_item(item_name: String):
+	if item_name not in inventory:
+		inventory.append(item_name)
+		print("Picked up: ", item_name)
+	else:
+		print("Already have: ", item_name)
+
+func has_item(item_name: String) -> bool:
+	return item_name in inventory
