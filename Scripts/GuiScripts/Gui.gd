@@ -1,4 +1,10 @@
-extends Control
+extends CanvasLayer
+
+var player
+
+func _ready():
+	player = get_node("/root/Level/Character")
 
 func _process(_delta):
-	$InventoryItems.text = $"../..".GetInventoryItems()
+	if player:
+		$InventoryItems.text = player.GetInventoryItems()

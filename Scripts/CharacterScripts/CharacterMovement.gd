@@ -67,8 +67,6 @@ func _unhandled_input(event: InputEvent):
 
 
 
-
-
 #vrata
 #Dobije podatke o lokaciji svih vrata unutar jsona
 func GetDoorData(FilePath: String):
