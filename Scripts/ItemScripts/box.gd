@@ -15,15 +15,16 @@ func _ready():
 	
 	SnapBoxToGrid()
 	
-func _on_body_entered(body):
+func activate(player):
 	if opened:
 		return
 
-	if body.has_method("has_item") and body.has_item(required_key):
+	if player.has_method("has_item") and player.has_item(required_key):
 		opened = true
 
-		if body.has_method("add_item"):
-			body.add_item(reward_item)
-			queue_free()
+		if player.has_method("add_item"):
+			player.add_item(reward_item)
+		queue_free()
+
 	else:
 		print("Box is locked. Requires: ", required_key)

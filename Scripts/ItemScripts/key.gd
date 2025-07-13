@@ -9,11 +9,9 @@ func SnapKeyToGrid():
 
 func _ready():
 	$Sprite2D.texture = sprite_texture
-	connect("body_entered", Callable(self, "_on_body_entered"))
-	
 	SnapKeyToGrid()
 
-func _on_body_entered(body):
-	if body.has_method("add_item"):
-		body.add_item(item_name)
+func activate(player):
+	if player.has_method("add_item"):
+		player.add_item(item_name)
 		queue_free()

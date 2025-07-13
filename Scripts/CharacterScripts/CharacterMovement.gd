@@ -63,20 +63,37 @@ func _ready():
 	GetDoorData("res://JSON/DoorLocations.json")
 	Doors = GetDoorDataForLevel(GlobalLevel.LevelName)
 
+	$InteractArea.connect("area_entered", Callable(self, "_on_InteractArea_area_entered"))
+	$InteractArea.connect("area_exited", Callable(self, "_on_InteractArea_area_exited"))
+
 # Handle input (arrow keys or WASD, if mapped in project settings)
 func _unhandled_input(event: InputEvent):
 	for Direction in Inputs.keys():
 		if event.is_action_pressed(Direction):
 			Move(Direction)
 
+	if event.is_action_pressed("interact"):
+		for obj in interactables:
+			if obj.has_method("activate"):
+				obj.activate(self)
+				break
+
+# Inventory
 var inventory: Array[String] = []
+var interactables: Array[Area2D] = []
 
 func add_item(item_name: String):
 	if item_name not in inventory:
 		inventory.append(item_name)
 		print("Picked up: ", item_name)
-	else:
-		print("Already have: ", item_name)
 
 func has_item(item_name: String) -> bool:
 	return item_name in inventory
+
+func _on_InteractArea_area_entered(area):
+	if area.has_method("activate"):
+		interactables.append(area)
+
+func _on_InteractArea_area_exited(area):
+	if interactables.has(area):
+		interactables.erase(area)
