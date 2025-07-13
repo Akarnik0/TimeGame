@@ -8,6 +8,7 @@ var Doors
 var IsInDoor: bool
 var SameRoomPosition
 
+#kretanje
 # Directional inputs
 var Inputs = {
 	"right": Vector2.RIGHT,
@@ -15,20 +16,6 @@ var Inputs = {
 	"up": Vector2.UP,
 	"down": Vector2.DOWN
 }
-#Dobije podatke o lokaciji svih vrata unutar jsona
-func GetDoorData(FilePath: String):
-	var File = FileAccess.open(FilePath, FileAccess.READ)
-	var JsonText = File.get_as_text()
-	var ResultText = JSON.parse_string(JsonText)
-	AllDoors = ResultText
-#Dobije podatke o lokaciji vrata iz levela unutar jsona
-func GetDoorDataForLevel(LevelName: String):
-	var RawArray = AllDoors.get(LevelName,[])
-	var LevelDoors = []
-	for Pair in RawArray:
-		if Pair.size() == 2:
-			LevelDoors.append(Vector2(Pair[0], Pair[1]))
-	return LevelDoors
 # Snap character to grid center
 func SnapCharacterToGrid():
 	var tile_size = $"../Grid".tile_set.tile_size.x
@@ -78,9 +65,35 @@ func _unhandled_input(event: InputEvent):
 				obj.activate(self)
 				break
 
+
+
+
+
+#vrata
+#Dobije podatke o lokaciji svih vrata unutar jsona
+func GetDoorData(FilePath: String):
+	var File = FileAccess.open(FilePath, FileAccess.READ)
+	var JsonText = File.get_as_text()
+	var ResultText = JSON.parse_string(JsonText)
+	AllDoors = ResultText
+#Dobije podatke o lokaciji vrata iz levela unutar jsona
+func GetDoorDataForLevel(LevelName: String):
+	var RawArray = AllDoors.get(LevelName,[])
+	var LevelDoors = []
+	for Pair in RawArray:
+		if Pair.size() == 2:
+			LevelDoors.append(Vector2(Pair[0], Pair[1]))
+	return LevelDoors
+
+
+
+
 # Inventory
 var inventory: Array[String] = []
 var interactables: Array[Area2D] = []
+
+func GetInventoryItems() -> String:
+	return "Inventory:\n" + "\n".join(inventory)
 
 func add_item(item_name: String):
 	if item_name not in inventory:

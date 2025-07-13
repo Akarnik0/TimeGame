@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cnx16dmfkhusg"]
+[gd_scene load_steps=25 format=4 uid="uid://cnx16dmfkhusg"]
 
 [ext_resource type="Texture2D" uid="uid://dpy6um7i5jvtv" path="res://Assets/TileAssets/Crvena.png" id="1_8c0lf"]
 [ext_resource type="Script" uid="uid://ckklj8718nab7" path="res://Scripts/LevelScripts/LevelName.gd" id="1_754fn"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bhk4u1r1srhrj" path="res://Assets/TileAssets/Plava.png" id="4_oqgf2"]
 [ext_resource type="Texture2D" uid="uid://b04kyohlxbp22" path="res://Assets/CharacterAssets/WalterWeiss.png" id="4_wqkje"]
 [ext_resource type="Texture2D" uid="uid://bw3l4prk2lsre" path="res://Assets/TileAssets/Zlatna.png" id="5_qxfql"]
+[ext_resource type="Script" uid="uid://cjr0m7lhpqaaw" path="res://Scripts/GuiScripts/Gui.gd" id="9_ha31o"]
 [ext_resource type="PackedScene" uid="uid://ckjv184cin1d1" path="res://Scenes/Key.tscn" id="9_qxfql"]
 [ext_resource type="Texture2D" uid="uid://bmxo4e3orejf7" path="res://Assets/Item/RedKey.png" id="10_ha31o"]
 [ext_resource type="PackedScene" uid="uid://b5fhu0u18g00p" path="res://Scenes/Box.tscn" id="11_pa6b8"]
@@ -84,6 +85,21 @@ shape = SubResource("RectangleShape2D_754fn")
 
 [node name="Camera2D" type="Camera2D" parent="Character"]
 zoom = Vector2(3, 3)
+
+[node name="GuiControl" type="Control" parent="Character/Camera2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 83.0
+offset_top = -108.0
+offset_right = 192.0
+offset_bottom = -68.0
+script = ExtResource("9_ha31o")
+
+[node name="InventoryItems" type="Label" parent="Character/Camera2D/GuiControl"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 10
 
 [node name="RayCast2D" type="RayCast2D" parent="Character"]
 

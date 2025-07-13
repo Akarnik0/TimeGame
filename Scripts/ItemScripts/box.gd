@@ -24,6 +24,8 @@ func activate(player):
 
 		if player.has_method("add_item"):
 			player.add_item(reward_item)
+			GlobalLevel.Turns += 1
+			print(GlobalLevel.Turns)
 		queue_free()
 
 	else:
