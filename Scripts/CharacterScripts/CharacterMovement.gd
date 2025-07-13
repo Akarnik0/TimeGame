@@ -26,11 +26,11 @@ func Move(Direction):
 	var tile_size = $"../Grid".tile_set.tile_size.x
 	ray.target_position = Inputs[Direction] * tile_size  # Aim ray in direction of movement
 	ray.force_raycast_update()
-
+	#postavlja lokaciju interact collisiona jedno polje ispred smjera kretanja karaktera
+	$InteractArea/CollisionShape2D.position = Inputs[Direction] * tile_size
 	if !ray.is_colliding():
 		var LastPosition = position
 		position += Inputs[Direction] * tile_size
-		
 		if position != SameRoomPosition && IsInDoor == true:
 			GlobalLevel.Turns += 1
 			print(GlobalLevel.Turns)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://cnx16dmfkhusg"]
+[gd_scene load_steps=23 format=4 uid="uid://cnx16dmfkhusg"]
 
 [ext_resource type="Texture2D" uid="uid://dpy6um7i5jvtv" path="res://Assets/TileAssets/Crvena.png" id="1_8c0lf"]
 [ext_resource type="Script" uid="uid://ckklj8718nab7" path="res://Scripts/LevelScripts/LevelName.gd" id="1_754fn"]
@@ -58,15 +58,6 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxfql"]
 size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ha31o"]
-size = Vector2(32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pa6b8"]
-size = Vector2(32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_crh0w"]
-size = Vector2(32, 32)
-
 [node name="Level" type="Node2D"]
 script = ExtResource("1_754fn")
 
@@ -112,18 +103,6 @@ shape = SubResource("RectangleShape2D_c7le1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character/InteractArea"]
 position = Vector2(-32, 0)
 shape = SubResource("RectangleShape2D_qxfql")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Character/InteractArea"]
-position = Vector2(0, 32)
-shape = SubResource("RectangleShape2D_ha31o")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Character/InteractArea"]
-position = Vector2(32, 0)
-shape = SubResource("RectangleShape2D_pa6b8")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Character/InteractArea"]
-position = Vector2(0, -32)
-shape = SubResource("RectangleShape2D_crh0w")
 
 [node name="Door" parent="." instance=ExtResource("13_pa6b8")]
 position = Vector2(112, 16)
