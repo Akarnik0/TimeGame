@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ceq4ny3rxb57y"]
 
-[ext_resource type="Script" uid="uid://b0x8vyftqchv1" path="res://Scripts/light_switch.gd" id="1_g71us"]
+[ext_resource type="Script" uid="uid://b0x8vyftqchv1" path="res://Scripts/Switch/light_switch.gd" id="1_g71us"]
 [ext_resource type="Texture2D" uid="uid://bmxo4e3orejf7" path="res://Assets/Item/RedKey.png" id="2_sabed"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sabed"]

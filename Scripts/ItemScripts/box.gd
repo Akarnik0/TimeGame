@@ -29,14 +29,13 @@ func activate(player):
 	opened = true
 
 	if required_key != "":
-		GlobalLevel.Turns += 1
 		player.remove_item(required_key)
 	if special_item != "":
-		GlobalLevel.Turns += 1
 		player.remove_item(special_item)
 
 	if player.has_method("add_item"):
 		player.add_item(reward_item)
+		GlobalLevel.Turns += 1
 		print("Turns: ", GlobalLevel.Turns)
 
 	queue_free()

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dofwguyeb2w5"]
+
+[ext_resource type="Script" uid="uid://r37c3ar0l2j0" path="res://Scripts/Switch/light_switch_muti_use.gd" id="1_4dx67"]
+[ext_resource type="Texture2D" uid="uid://bmxo4e3orejf7" path="res://Assets/Item/RedKey.png" id="2_ct70c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct70c"]
+
+[node name="LightSwitchMutiUse" type="Area2D"]
+script = ExtResource("1_4dx67")
+sprite = ExtResource("2_ct70c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ct70c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

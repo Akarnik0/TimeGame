@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://cnx16dmfkhusg"]
+[gd_scene load_steps=35 format=4 uid="uid://cnx16dmfkhusg"]
 
 [ext_resource type="Texture2D" uid="uid://dpy6um7i5jvtv" path="res://Assets/TileAssets/Crvena.png" id="1_8c0lf"]
 [ext_resource type="Script" uid="uid://ckklj8718nab7" path="res://Scripts/LevelScripts/LevelName.gd" id="1_754fn"]
@@ -9,15 +9,22 @@
 [ext_resource type="Texture2D" uid="uid://b04kyohlxbp22" path="res://Assets/CharacterAssets/WalterWeiss.png" id="4_wqkje"]
 [ext_resource type="Texture2D" uid="uid://bw3l4prk2lsre" path="res://Assets/TileAssets/Zlatna.png" id="5_qxfql"]
 [ext_resource type="Script" uid="uid://c320y13w205iv" path="res://Scripts/CameraScripts/Camera_script.gd" id="8_crh0w"]
-[ext_resource type="PackedScene" uid="uid://ceq4ny3rxb57y" path="res://Scenes/Light_switch.tscn" id="8_vofx3"]
+[ext_resource type="PackedScene" uid="uid://ceq4ny3rxb57y" path="res://Scenes/Switch/Light_switch.tscn" id="8_vofx3"]
 [ext_resource type="Script" uid="uid://cjr0m7lhpqaaw" path="res://Scripts/GuiScripts/Gui.gd" id="9_ha31o"]
-[ext_resource type="PackedScene" uid="uid://ckjv184cin1d1" path="res://Scenes/Item.tscn" id="9_qxfql"]
-[ext_resource type="PackedScene" uid="uid://b5fhu0u18g00p" path="res://Scenes/Box.tscn" id="11_pa6b8"]
+[ext_resource type="PackedScene" uid="uid://ckjv184cin1d1" path="res://Scenes/Interact/Item.tscn" id="9_qxfql"]
+[ext_resource type="PackedScene" uid="uid://b5fhu0u18g00p" path="res://Scenes/Interact/Box.tscn" id="11_pa6b8"]
 [ext_resource type="Texture2D" uid="uid://buv8bxl5j7dhp" path="res://Assets/Item/Box/image (4).webp" id="13_nngtn"]
-[ext_resource type="PackedScene" uid="uid://143uwfw0ymrk" path="res://Scenes/door.tscn" id="13_pa6b8"]
-[ext_resource type="Texture2D" uid="uid://bqkx3hk6skqnb" path="res://Assets/Item/Special/Klijesta.png" id="15_vofx3"]
+[ext_resource type="PackedScene" uid="uid://143uwfw0ymrk" path="res://Scenes/Interact/door.tscn" id="13_pa6b8"]
+[ext_resource type="Texture2D" uid="uid://kthk54xq4sl3" path="res://Assets/Item/Box/image.webp" id="14_2klc5"]
 [ext_resource type="Texture2D" uid="uid://xfpwwdwvvlm" path="res://Assets/Item/Key/KeyRed.png" id="16_00k4y"]
-[ext_resource type="Texture2D" uid="uid://bo4wi7wpem2dn" path="res://Assets/Item/Special/Hammer.png" id="17_3a44l"]
+[ext_resource type="Texture2D" uid="uid://cs05x4wkv0sqx" path="res://Assets/Item/Key/KeyGreen.png" id="16_nngtn"]
+[ext_resource type="Texture2D" uid="uid://bmrqodohmguvd" path="res://Assets/Item/Box/image (2).webp" id="17_nngtn"]
+[ext_resource type="Texture2D" uid="uid://wd5yu26wib2" path="res://Assets/Item/Key/KeyPurple.png" id="18_3a44l"]
+[ext_resource type="Texture2D" uid="uid://csyth6vu4e7xn" path="res://Assets/Item/Box/image (3).webp" id="19_0cmrb"]
+[ext_resource type="Texture2D" uid="uid://cnfbq5funtjhd" path="res://Assets/Item/Key/KeyOrange.png" id="19_00k4y"]
+[ext_resource type="PackedScene" uid="uid://lhunmjjpu43q" path="res://Scenes/Switch/blocker.tscn" id="20_3a44l"]
+[ext_resource type="Texture2D" uid="uid://bmxo4e3orejf7" path="res://Assets/Item/RedKey.png" id="20_pnhnk"]
+[ext_resource type="Texture2D" uid="uid://bc7hnu55ynljp" path="res://Assets/Item/Box/image (1).webp" id="22_6y3s5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ha31o"]
 texture = ExtResource("1_8c0lf")
@@ -54,9 +61,6 @@ sources/5 = SubResource("TileSetAtlasSource_crh0w")
 sources/6 = SubResource("TileSetAtlasSource_c7le1")
 sources/7 = SubResource("TileSetAtlasSource_2klc5")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nngtn"]
-size = Vector2(42, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_754fn"]
 size = Vector2(32, 32)
 
@@ -81,24 +85,6 @@ grow_horizontal = 2
 [node name="Grid" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD///7/BAAAAAAAAAAAAP7/BAAAAAAAAAD+//7/BAAAAAAAAAD9//7/BAAAAAAAAAD8//7/BAAAAAAAAAD8////BAAAAAAAAAD8/wAABAAAAAAAAAD8/wEABAAAAAAAAAD8/wIABAAAAAAAAAD8/wMABAAAAAAAAAD8/wQABAAAAAAAAAD9/wQABAAAAAAAAAD+/wQAAwAAAAAAAAD//wQABAAAAAAAAAAAAAQABAAAAAAAAAABAAQAAwAAAAAAAAACAAQABAAAAAAAAAADAAQABAAAAAAAAAADAAMABAAAAAAAAAADAAIAAwAAAAAAAAADAAEABAAAAAAAAAADAAAAAwAAAAAAAAADAP//BAAAAAAAAAADAP7/BAAAAAAAAAACAP7/BAAAAAAAAAABAP7/BAAAAAAAAAD9////BQAAAAAAAAD9/wAABQAAAAAAAAD9/wEABQAAAAAAAAD9/wIABQAAAAAAAAD9/wMABQAAAAAAAAD+/wMABQAAAAAAAAD//wMABQAAAAAAAAAAAAMABQAAAAAAAAABAAMABQAAAAAAAAACAAMABQAAAAAAAAACAAIABQAAAAAAAAACAAEABQAAAAAAAAACAAAABQAAAAAAAAACAP//BQAAAAAAAAABAP//BQAAAAAAAAAAAP//BQAAAAAAAAD/////BQAAAAAAAAD+////BQAAAAAAAAD+/wAABQAAAAAAAAD+/wEABQAAAAAAAAD+/wIABQAAAAAAAAD//wIABQAAAAAAAAAAAAIABQAAAAAAAAABAAIABQAAAAAAAAABAAEABQAAAAAAAAABAAAABQAAAAAAAAAAAAAABQAAAAAAAAD//wAABQAAAAAAAAD//wEABQAAAAAAAAAAAAEABQAAAAAAAAD8/wUABAAAAAAAAAD8/wYABAAAAAAAAAD8/wcABAAAAAAAAAD8/wgABAAAAAAAAAD8/wkABAAAAAAAAAD9/wkABAAAAAAAAAD+/wkABAAAAAAAAAD//wkABAAAAAAAAAAAAAkABAAAAAAAAAAAAAgABAAAAAAAAAAAAAcAAwAAAAAAAAAAAAYABAAAAAAAAAAAAAUABAAAAAAAAAAAAAoABAAAAAAAAAAAAAsABAAAAAAAAAAAAAwABAAAAAAAAAAAAA0ABAAAAAAAAAAAAA4ABAAAAAAAAAAAAA8ABAAAAAAAAAABAA8ABAAAAAAAAAACAA8ABAAAAAAAAAADAA8ABAAAAAAAAAAEAA8ABAAAAAAAAAADAAUABAAAAAAAAAADAAYABAAAAAAAAAADAAcABAAAAAAAAAADAAgAAwAAAAAAAAADAAkABAAAAAAAAAADAAoABAAAAAAAAAADAAsABAAAAAAAAAADAAwABAAAAAAAAAADAA0ABAAAAAAAAAADAA4AAwAAAAAAAAAFAA8ABAAAAAAAAAAGAA8ABAAAAAAAAAAHAA8ABAAAAAAAAAAIAA8ABAAAAAAAAAAJAA8ABAAAAAAAAAAKAA8ABAAAAAAAAAAKAA4ABAAAAAAAAAAKAA0ABAAAAAAAAAAKAAwABAAAAAAAAAAEAAwABAAAAAAAAAAFAAwABAAAAAAAAAAGAAwABAAAAAAAAAAHAAwAAwAAAAAAAAAIAAwABAAAAAAAAAAJAAwABAAAAAAAAAAKAAsABAAAAAAAAAAKAAoABAAAAAAAAAAKAAkAAwAAAAAAAAAKAAgABAAAAAAAAAAKAAcABAAAAAAAAAAKAAYABAAAAAAAAAAKAAQAAwAAAAAAAAAKAAUABAAAAAAAAAAEAAEABAAAAAAAAAAFAAEABAAAAAAAAAAGAAEABAAAAAAAAAAHAAEABAAAAAAAAAAIAAEABAAAAAAAAAAJAAEABAAAAAAAAAAKAAEABAAAAAAAAAAKAAIABAAAAAAAAAAKAAMABAAAAAAAAAAEAP7/BAAAAAAAAAAFAP7/BAAAAAAAAAAGAP7/BAAAAAAAAAAHAP7/BAAAAAAAAAAIAP7/BAAAAAAAAAAJAP7/BAAAAAAAAAAKAP7/BAAAAAAAAAAKAP//BAAAAAAAAAAKAAAABAAAAAAAAAALAAEABAAAAAAAAAAMAAEABAAAAAAAAAANAAEABAAAAAAAAAAOAAEABAAAAAAAAAAPAAEABAAAAAAAAAAQAAEABAAAAAAAAAALAA8ABAAAAAAAAAAMAA8ABAAAAAAAAAANAA8ABAAAAAAAAAAOAA8ABAAAAAAAAAAPAA8ABAAAAAAAAAAQAA8ABAAAAAAAAAAQAAIABAAAAAAAAAAQAAMABAAAAAAAAAAQAAQABAAAAAAAAAAQAAUABAAAAAAAAAAQAAYABAAAAAAAAAAQAAcABAAAAAAAAAAQAAgABAAAAAAAAAAQAAkABAAAAAAAAAAQAAoABAAAAAAAAAAQAAsABAAAAAAAAAAQAAwABAAAAAAAAAAQAA0ABAAAAAAAAAAQAA4ABAAAAAAAAAAIAAMABQAAAAAAAAAHAAsABQAAAAAAAAD9/wgABQAAAAAAAAALAAwABAAAAAAAAAAMAAwABAAAAAAAAAANAAwAAwAAAAAAAAAOAAwABAAAAAAAAAAPAAwABAAAAAAAAAALAAcABAAAAAAAAAAMAAcABAAAAAAAAAANAAcAAwAAAAAAAAAOAAcABAAAAAAAAAAPAAcABAAAAAAAAAALAAkABQAAAAAAAAAJAP//BQAAAAAAAAAEAAsABQAAAAAAAAAPAA4ABQAAAAAAAAD+/wcABQAAAAAAAAD+/wYABQAAAAAAAAD+/wUABQAAAAAAAAD9/wUABQAAAAAAAAD9/wYABQAAAAAAAAD9/wcABQAAAAAAAAD//wUABQAAAAAAAAD//wYABQAAAAAAAAD//wcABQAAAAAAAAD//wgABQAAAAAAAAD+/wgABQAAAAAAAAABAAcABQAAAAAAAAABAAYABQAAAAAAAAABAAUABQAAAAAAAAACAAUABQAAAAAAAAACAAYABQAAAAAAAAACAAcABQAAAAAAAAACAAgABQAAAAAAAAABAAgABQAAAAAAAAABAAkABQAAAAAAAAABAAoABQAAAAAAAAABAAsABQAAAAAAAAABAAwABQAAAAAAAAABAA0ABQAAAAAAAAABAA4ABQAAAAAAAAACAA4ABQAAAAAAAAACAA0ABQAAAAAAAAACAAwABQAAAAAAAAACAAsABQAAAAAAAAACAAoABQAAAAAAAAACAAkABQAAAAAAAAAHAAYABQAAAAAAAAAHAAUABQAAAAAAAAAHAAQABQAAAAAAAAAHAAMABQAAAAAAAAAHAAIABQAAAAAAAAAGAAIABQAAAAAAAAAFAAIABQAAAAAAAAAEAAIABQAAAAAAAAAEAAMABQAAAAAAAAAEAAQABQAAAAAAAAAEAAUABQAAAAAAAAAEAAYABQAAAAAAAAAEAAcABQAAAAAAAAAEAAgABQAAAAAAAAAEAAkABQAAAAAAAAAEAAoABQAAAAAAAAAFAAoABQAAAAAAAAAFAAkABQAAAAAAAAAFAAgABQAAAAAAAAAFAAcABQAAAAAAAAAFAAYABQAAAAAAAAAFAAUABQAAAAAAAAAFAAQABQAAAAAAAAAFAAMABQAAAAAAAAAGAAMABQAAAAAAAAAGAAQABQAAAAAAAAAGAAUABQAAAAAAAAAGAAYABQAAAAAAAAAGAAcABQAAAAAAAAAGAAgABQAAAAAAAAAGAAkABQAAAAAAAAAGAAoABQAAAAAAAAAGAAsABQAAAAAAAAAFAAsABQAAAAAAAAAHAAoABQAAAAAAAAAHAAkABQAAAAAAAAAHAAgABQAAAAAAAAAHAAcABQAAAAAAAAAIAAcABQAAAAAAAAAIAAYABQAAAAAAAAAIAAUABQAAAAAAAAAIAAQABQAAAAAAAAAJAAQABQAAAAAAAAAJAAMABQAAAAAAAAAJAAIABQAAAAAAAAAIAAIABQAAAAAAAAAJAAUABQAAAAAAAAAJAAYABQAAAAAAAAAJAAcABQAAAAAAAAAJAAgABQAAAAAAAAAIAAgABQAAAAAAAAAIAAkABQAAAAAAAAAIAAoABQAAAAAAAAAIAAsABQAAAAAAAAAJAAsABQAAAAAAAAAJAAoABQAAAAAAAAAJAAkABQAAAAAAAAAMAAQABQAAAAAAAAAMAAMABQAAAAAAAAAMAAIABQAAAAAAAAALAAIABQAAAAAAAAALAAMABQAAAAAAAAALAAQABQAAAAAAAAALAAUABQAAAAAAAAALAAYABQAAAAAAAAAMAAYABQAAAAAAAAAMAAUABQAAAAAAAAANAAUABQAAAAAAAAANAAQABQAAAAAAAAANAAMABQAAAAAAAAANAAIABQAAAAAAAAAOAAIABQAAAAAAAAAOAAMABQAAAAAAAAAOAAQABQAAAAAAAAAOAAUABQAAAAAAAAAOAAYABQAAAAAAAAANAAYABQAAAAAAAAAPAAYABQAAAAAAAAAPAAUABQAAAAAAAAAPAAQABQAAAAAAAAAPAAMABQAAAAAAAAAPAAIABQAAAAAAAAAOAAoABQAAAAAAAAAOAAkABQAAAAAAAAAOAAgABQAAAAAAAAANAAgABQAAAAAAAAAMAAgABQAAAAAAAAALAAgABQAAAAAAAAAMAAkABQAAAAAAAAAMAAoABQAAAAAAAAALAAoABQAAAAAAAAALAAsABQAAAAAAAAAMAAsABQAAAAAAAAANAAsABQAAAAAAAAANAAoABQAAAAAAAAANAAkABQAAAAAAAAAOAAsABQAAAAAAAAAPAAsABQAAAAAAAAAPAAoABQAAAAAAAAAPAAkABQAAAAAAAAAPAAgABQAAAAAAAAAGAAAABQAAAAAAAAAGAP//BQAAAAAAAAAFAP//BQAAAAAAAAAEAP//BQAAAAAAAAAEAAAABQAAAAAAAAAFAAAABQAAAAAAAAAHAP//BQAAAAAAAAAHAAAABQAAAAAAAAAIAAAABQAAAAAAAAAIAP//BQAAAAAAAAAJAAAABQAAAAAAAAAHAA0ABQAAAAAAAAAGAA0ABQAAAAAAAAAFAA0ABQAAAAAAAAAEAA0ABQAAAAAAAAAEAA4ABQAAAAAAAAAFAA4ABQAAAAAAAAAGAA4ABQAAAAAAAAAHAA4ABQAAAAAAAAAIAA4ABQAAAAAAAAAIAA0ABQAAAAAAAAAJAA0ABQAAAAAAAAAJAA4ABQAAAAAAAAAOAA4ABQAAAAAAAAAOAA0ABQAAAAAAAAANAA0ABQAAAAAAAAAMAA0ABQAAAAAAAAALAA0ABQAAAAAAAAALAA4ABQAAAAAAAAAMAA4ABQAAAAAAAAANAA4ABQAAAAAAAAAPAA0ABQAAAAAAAAA=")
 tile_set = SubResource("TileSet_0f350")
-
-[node name="overlay" type="ColorRect" parent="."]
-offset_left = 352.0
-offset_top = 256.0
-offset_right = 512.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 0.501961)
-
-[node name="blocker" type="StaticBody2D" parent="."]
-position = Vector2(432, 266)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="blocker"]
-shape = SubResource("RectangleShape2D_nngtn")
-
-[node name="LightSwitch" parent="." instance=ExtResource("8_vofx3")]
-position = Vector2(-79, 270)
-blocker_path = NodePath("../blocker")
-overlay_path = NodePath("../overlay")
 
 [node name="gameplay_camera" type="Camera2D" parent="."]
 position = Vector2(-24, 39)
@@ -129,20 +115,22 @@ shape = SubResource("RectangleShape2D_qxfql")
 
 [node name="Door" parent="." instance=ExtResource("13_pa6b8")]
 position = Vector2(112, 16)
-required_key = "RedKey"
-special_item = "Specijalan"
+required_key = ""
+special_item = "Cekic"
 
 [node name="Door2" parent="." instance=ExtResource("13_pa6b8")]
 position = Vector2(432, 400)
 required_key = ""
+special_item = "Cekic"
 
 [node name="Door3" parent="." instance=ExtResource("13_pa6b8")]
 position = Vector2(432, 240)
 required_key = ""
+special_item = "Makaze"
 
 [node name="Door4" parent="." instance=ExtResource("13_pa6b8")]
 position = Vector2(336, 304)
-required_key = "Nokey"
+required_key = "Key does not exist"
 
 [node name="Door5" parent="." instance=ExtResource("13_pa6b8")]
 position = Vector2(112, 464)
@@ -180,29 +168,71 @@ accessible_side = "bottom"
 position = Vector2(-48, 144)
 required_key = ""
 
+[node name="blocker" parent="." instance=ExtResource("20_3a44l")]
+position = Vector2(432, 266)
+
+[node name="GreenBox" parent="." instance=ExtResource("11_pa6b8")]
+position = Vector2(13, -16)
+required_key = "GreenKey"
+reward_item = "YellowKey"
+sprite = ExtResource("14_2klc5")
+
+[node name="GreenKey" parent="." instance=ExtResource("9_qxfql")]
+position = Vector2(290, 435)
+item_name = "GreenKey"
+sprite_texture = ExtResource("16_nngtn")
+
+[node name="YellowBox" parent="." instance=ExtResource("11_pa6b8")]
+position = Vector2(282, -10)
+required_key = "YellowKey"
+sprite = ExtResource("17_nngtn")
+
+[node name="PurpleKey" parent="." instance=ExtResource("9_qxfql")]
+position = Vector2(-77, 79)
+item_name = "PurpleKey"
+sprite_texture = ExtResource("18_3a44l")
+
+[node name="PurpleBox" parent="." instance=ExtResource("11_pa6b8")]
+position = Vector2(-80, 270)
+required_key = "PurpleKey"
+special_item = "Makaze"
+sprite = ExtResource("19_0cmrb")
+
+[node name="Makaze" parent="." instance=ExtResource("9_qxfql")]
+position = Vector2(-81, 217)
+item_name = "Makaze"
+sprite_texture = ExtResource("20_pnhnk")
+
+[node name="Cekic" parent="." instance=ExtResource("9_qxfql")]
+position = Vector2(62, 354)
+item_name = "Cekic"
+sprite_texture = ExtResource("20_pnhnk")
+
+[node name="BrownKey" parent="." instance=ExtResource("9_qxfql")]
+position = Vector2(278, 90)
+item_name = "BrownKey"
+sprite_texture = ExtResource("19_00k4y")
+
+[node name="BlueBox" parent="." instance=ExtResource("11_pa6b8")]
+position = Vector2(161, 350)
+required_key = "BlueKey"
+sprite = ExtResource("22_6y3s5")
+
 [node name="Box" parent="." instance=ExtResource("11_pa6b8")]
-z_index = 1
-position = Vector2(-78, 30)
+position = Vector2(166, 433)
+reward_item = "BlueKey"
+sprite = ExtResource("22_6y3s5")
+
+[node name="LightSwitch" parent="." instance=ExtResource("8_vofx3")]
+position = Vector2(225, 449)
+blocker_path = NodePath("../blocker")
+
+[node name="RedBox" parent="." instance=ExtResource("11_pa6b8")]
+position = Vector2(486, 463)
 required_key = "RedKey"
-special_item = "Specijalan"
 sprite = ExtResource("13_nngtn")
 
-[node name="Key" parent="." instance=ExtResource("9_qxfql")]
-position = Vector2(-4, -14)
+[node name="Item" parent="." instance=ExtResource("9_qxfql")]
+position = Vector2(484, 322)
 item_name = "RedKey"
 sprite_texture = ExtResource("16_00k4y")
-
-[node name="Key2" parent="." instance=ExtResource("9_qxfql")]
-position = Vector2(-6, 82)
-item_name = "RedKey"
-sprite_texture = ExtResource("16_00k4y")
-
-[node name="Specijalan" parent="." instance=ExtResource("9_qxfql")]
-position = Vector2(46, 83)
-item_name = "Specijalan"
-sprite_texture = ExtResource("15_vofx3")
-
-[node name="Specijalan2" parent="." instance=ExtResource("9_qxfql")]
-position = Vector2(53, -14)
-item_name = "Specijalan"
-sprite_texture = ExtResource("17_3a44l")

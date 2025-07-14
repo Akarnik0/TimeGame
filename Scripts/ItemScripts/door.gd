@@ -14,19 +14,22 @@ func activate(player):
 	if opened:
 		return
 
+	var blocked := false
+
 	if onesideddoor and !is_approaching_from_correct_side(player):
 		print("You cannot open this door from this side!")
-		return
+		blocked = true
 
 	if required_key != "" and !player.has_item(required_key):
 		print("Door is locked. Missing key: ", required_key)
-		return
+		blocked = true
 
 	if special_item != "" and !player.has_item(special_item):
 		print("Door needs a special item: ", special_item)
-		return
+		blocked = true
 
-	opened = true
+	if blocked:
+		return
 
 	if required_key != "":
 		player.remove_item(required_key)
@@ -39,7 +42,7 @@ func activate(player):
 	if special_item != "":
 		used_items.append(special_item)
 		GlobalLevel.Turns += 1
-	print("Turns: ", GlobalLevel.Turns)
+		print("Turns: ", GlobalLevel.Turns)
 
 	queue_free()
 

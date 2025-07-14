@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://lhunmjjpu43q"]
+
+[ext_resource type="Script" uid="uid://lx7nptx6lsqp" path="res://Scripts/Switch/blocker.gd" id="1_u2bgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejikd"]
+size = Vector2(42, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ytk1a"]
+size = Vector2(20, 23)
+
+[node name="blocker" type="StaticBody2D"]
+script = ExtResource("1_u2bgd")
+
+[node name="overlay" type="ColorRect" parent="."]
+offset_left = -80.0
+offset_top = -10.0
+offset_right = 80.0
+offset_bottom = 118.0
+color = Color(0, 0, 0, 0.501961)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ejikd")
+
+[node name="MessageArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MessageArea"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_ytk1a")
