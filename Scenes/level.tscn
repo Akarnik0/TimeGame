@@ -78,6 +78,7 @@ tile_set = SubResource("TileSet_0f350")
 [node name="gameplay_camera" type="Camera2D" parent="."]
 position = Vector2(-24, 39)
 zoom = Vector2(3, 3)
+position_smoothing_enabled = true
 script = ExtResource("8_crh0w")
 
 [node name="Character" type="CharacterBody2D" parent="."]
