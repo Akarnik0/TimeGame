@@ -33,7 +33,7 @@ func Move(Direction):
 		position += Inputs[Direction] * tile_size
 		if position != SameRoomPosition && IsInDoor == true:
 			GlobalLevel.Turns += 1
-			print(GlobalLevel.Turns)
+			print("Turns: ",GlobalLevel.Turns)
 			if GlobalLevel.Turns >=12:
 				print("gotovo")
 			IsInDoor = false
