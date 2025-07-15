@@ -5,14 +5,12 @@ extends Area2D
 @export var special_item: String = ""
 @export var onesideddoor: bool = false
 @export var accessible_side: String = ""
-var opened = false
-
+var character
 func _ready():
 	$Sprite2D.texture = sprite
+	character = get_node("/root/Level/Character")
 
 func activate(player):
-	if opened:
-		return
 
 	var blocked := false
 
@@ -43,8 +41,13 @@ func activate(player):
 		used_items.append(special_item)
 		GlobalLevel.Turns += 1
 		print("Turns: ", GlobalLevel.Turns)
-
-	queue_free()
+	$StaticBody2D/CollisionShape2D.disabled = true
+	$".".visible = false
+	$".".monitoring = false
+	$".".monitorable = false
+func _process(delta):
+	if character.Is_going_back == true:
+		$StaticBody2D/CollisionShape2D.disabled = false
 
 func is_approaching_from_correct_side(player) -> bool:
 	var door_position = position
