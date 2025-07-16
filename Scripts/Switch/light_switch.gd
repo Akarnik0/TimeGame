@@ -5,6 +5,8 @@ extends Area2D
 
 var used = false
 
+var is_light_switch = true
+
 func SnapSwitchToGrid():
 	var tile_size = $"../Grid".tile_set.tile_size.x
 	position = position.snapped(Vector2.ONE * tile_size) + Vector2.ONE * tile_size / 2
@@ -23,7 +25,10 @@ func activate(_player):
 	var blocker = get_node(blocker_path)
 
 	if blocker: 
-		blocker.queue_free()
+		blocker.get_child(0).visible = false
+		blocker.get_child(1).disabled = true
+		blocker.get_child(2).monitoring = false
+		blocker.get_child(2).monitorable = false
 		GlobalLevel.Turns += 1
 		print("Turns: ", GlobalLevel.Turns)
 		print("Light are now ON")

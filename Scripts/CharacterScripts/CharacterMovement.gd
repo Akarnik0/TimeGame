@@ -48,6 +48,14 @@ func _On_go_back_step():
 				Character_interact.Interaction_item[turn_number].visible = true
 				Character_interact.Interaction_item[turn_number].monitorable = true
 				Character_interact.Interaction_item[turn_number].monitoring = true
+				#ovo je uzasan kod, nemam vremena da ni snage da napisem ovo na lijepsi nacin
+				if "is_light_switch" in Character_interact.Interaction_item[turn_number]:
+					var blocker = Character_interact.Interaction_item[turn_number].get_node(Character_interact.Interaction_item[turn_number].blocker_path)
+					blocker.get_child(0).visible = true
+					blocker.get_child(1).disabled = false
+					blocker.get_child(2).monitoring = true
+					blocker.get_child(2).monitorable = true
+					Character_interact.Interaction_item[turn_number].used = false
 		#---------------------------------------------------------------------------
 		if(Going_back_timer.wait_time >= 0.05):
 			Going_back_timer.wait_time -= 0.01
