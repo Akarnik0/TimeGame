@@ -5,4 +5,4 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Character":
-		print("You can't enter a dark room!")
+		Global.log("You can't enter a dark room!")

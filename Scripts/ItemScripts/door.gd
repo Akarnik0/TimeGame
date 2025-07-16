@@ -15,15 +15,15 @@ func activate(player):
 	var blocked := false
 
 	if onesideddoor and !is_approaching_from_correct_side(player):
-		print("You cannot open this door from this side!")
+		Global.log("You cannot open this door from this side!")
 		blocked = true
 
 	if required_key != "" and !player.has_item(required_key):
-		print("Door is locked. Missing key: ", required_key)
+		Global.log("Door is locked. Missing key: " + required_key)
 		blocked = true
 
 	if special_item != "" and !player.has_item(special_item):
-		print("Door needs a special item: ", special_item)
+		Global.log("Door needs a special item: " + special_item)
 		blocked = true
 
 	if blocked:
@@ -45,7 +45,7 @@ func activate(player):
 	$".".visible = false
 	$".".monitoring = false
 	$".".monitorable = false
-func _process(delta):
+func _process(_delta):
 	if character.Is_going_back == true:
 		$StaticBody2D/CollisionShape2D.disabled = false
 

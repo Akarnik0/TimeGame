@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpfqk5a8vfod5"]
+
+[ext_resource type="Script" uid="uid://bjq1hrjicl03c" path="res://Scripts/ItemScripts/machine.gd" id="1_v4qob"]
+[ext_resource type="Texture2D" uid="uid://bmxo4e3orejf7" path="res://Assets/Item/RedKey.png" id="2_mba2i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vi8w2"]
+
+[node name="Machine" type="Area2D"]
+script = ExtResource("1_v4qob")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mba2i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vi8w2")

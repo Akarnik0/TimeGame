@@ -94,9 +94,6 @@ func Move(Direction):
 		if position != SameRoomPosition && IsInDoor == true:
 			GlobalLevel.Turns += 1
 			print("Turns: ",GlobalLevel.Turns)
-			if GlobalLevel.Turns >=12:
-				print("gotovo")
-				Start_going_back()
 			IsInDoor = false
 		else:
 			IsInDoor = false
@@ -104,6 +101,15 @@ func Move(Direction):
 			if position == i:
 				IsInDoor = true
 				SameRoomPosition = LastPosition
+
+func _process(_delta):
+	if GlobalLevel.Turns == GlobalLevel.TurnsMax && Is_going_back == false:
+		Global.log("You reached the max number of turns!")
+		print("gotovo")
+		Start_going_back()
+	else:
+		return
+		
 
 # Called once when the scene is ready
 func _ready():

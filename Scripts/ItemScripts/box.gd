@@ -16,23 +16,25 @@ func _ready():
 func activate(player):
 
 	if required_key != "" and !player.has_item(required_key):
-		print("Box is locked. Missing key: ", required_key)
+		Global.log("Box is locked. Missing key: " + required_key)
 		return
 
 	if special_item != "" and !player.has_item(special_item):
-		print("Box needs a special item: ", special_item)
+		Global.log("Box needs a special item: " + special_item)
 		return
 
 	if required_key != "":
 		player.remove_item(required_key)
+		GlobalLevel.Turns += 1
 	if special_item != "":
+		GlobalLevel.Turns += 1
 		player.remove_item(special_item)
 
 	if player.has_method("add_item"):
 		player.add_item(reward_item)
+		Global.log("Opened a box")
 		if reward_item == "gear":
 			reward_item = ""
-		GlobalLevel.Turns += 1
 		print("Turns: ", GlobalLevel.Turns)
 	$".".visible = false
 	$".".monitoring = false

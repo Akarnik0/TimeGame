@@ -19,7 +19,7 @@ func _ready():
 func activate(_player):
 	
 	if used:
-		print("This switch can’t be used again.")
+		Global.log("This switch can’t be used again.")
 		return
 	
 	var blocker = get_node(blocker_path)
@@ -31,5 +31,5 @@ func activate(_player):
 		blocker.get_child(2).monitorable = false
 		GlobalLevel.Turns += 1
 		print("Turns: ", GlobalLevel.Turns)
-		print("Light are now ON")
+		Global.log("Light are now ON")
 		used = true

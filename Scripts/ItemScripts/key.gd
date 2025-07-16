@@ -16,6 +16,7 @@ func _ready():
 func activate(player):
 	if player.has_method("add_item"):
 		player.add_item(item_name)
+		Global.log("Piced up a key")
 		visible = false
 		monitoring = false
 		monitorable = false

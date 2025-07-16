@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://cnx16dmfkhusg"]
+[gd_scene load_steps=36 format=4 uid="uid://cnx16dmfkhusg"]
 
 [ext_resource type="Texture2D" uid="uid://dpy6um7i5jvtv" path="res://Assets/TileAssets/Crvena.png" id="1_8c0lf"]
 [ext_resource type="Script" uid="uid://ckklj8718nab7" path="res://Scripts/LevelScripts/LevelName.gd" id="1_754fn"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://lhunmjjpu43q" path="res://Scenes/Switch/blocker.tscn" id="20_3a44l"]
 [ext_resource type="Texture2D" uid="uid://bmxo4e3orejf7" path="res://Assets/Item/RedKey.png" id="20_pnhnk"]
 [ext_resource type="Texture2D" uid="uid://bc7hnu55ynljp" path="res://Assets/Item/Box/image (1).webp" id="22_6y3s5"]
+[ext_resource type="PackedScene" uid="uid://bpfqk5a8vfod5" path="res://Scenes/Interact/Machine.tscn" id="26_u0did"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ha31o"]
 texture = ExtResource("1_8c0lf")
@@ -79,6 +80,15 @@ script = ExtResource("9_ha31o")
 [node name="InventoryItems" type="Label" parent="Gui"]
 anchors_preset = 10
 anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="MessageLog" type="Label" parent="Gui"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 
@@ -236,3 +246,6 @@ sprite = ExtResource("13_nngtn")
 position = Vector2(484, 322)
 item_name = "RedKey"
 sprite_texture = ExtResource("16_00k4y")
+
+[node name="Machine" parent="." instance=ExtResource("26_u0did")]
+position = Vector2(-70, -11)
