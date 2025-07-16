@@ -34,7 +34,7 @@ var Going_back_timer := Timer.new()
 func Start_going_back():
 	if Character_movements.size() > 1:
 		Is_going_back = true
-		Going_back_id = Character_movements.size() - 2
+		Going_back_id = Character_movements.size() - 1
 		Going_back_timer.start()
 func _On_go_back_step():
 	if Going_back_id >= 0:

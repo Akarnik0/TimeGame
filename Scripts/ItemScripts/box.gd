@@ -25,7 +25,6 @@ func activate(player):
 
 	if required_key != "":
 		player.remove_item(required_key)
-		GlobalLevel.Turns += 1
 	if special_item != "":
 		GlobalLevel.Turns += 1
 		player.remove_item(special_item)
@@ -33,6 +32,7 @@ func activate(player):
 	if player.has_method("add_item"):
 		player.add_item(reward_item)
 		Global.log("Opened a box")
+		GlobalLevel.Turns += 1
 		if reward_item == "gear":
 			reward_item = ""
 		print("Turns: ", GlobalLevel.Turns)
