@@ -1,41 +1,41 @@
 [gd_scene load_steps=37 format=4 uid="uid://cnx16dmfkhusg"]
 
-[ext_resource type="Script" uid="uid://ckklj8718nab7" path="res://Scripts/LevelScripts/LevelName.gd" id="1_754fn"]
-[ext_resource type="Texture2D" uid="uid://bpibje1hbd5lv" path="res://Assets/TileAssets/DrveniPodovi.png" id="3_6y3s5"]
-[ext_resource type="Script" uid="uid://v0w8xmff0klu" path="res://Scripts/CharacterScripts/CharacterMovement.gd" id="3_81xng"]
-[ext_resource type="Texture2D" uid="uid://juvi04svfs4n" path="res://Assets/TileAssets/Zidovi.png" id="4_u0did"]
-[ext_resource type="Texture2D" uid="uid://b04kyohlxbp22" path="res://Assets/CharacterAssets/WalterWeiss.png" id="4_wqkje"]
-[ext_resource type="Texture2D" uid="uid://dcrha5lateckf" path="res://Assets/TileAssets/DrugiPodovi.png" id="5_53r2q"]
-[ext_resource type="Texture2D" uid="uid://pr7b2j3wlh1a" path="res://Assets/TileAssets/Test.png" id="6_u0did"]
-[ext_resource type="Script" uid="uid://c320y13w205iv" path="res://Scripts/CameraScripts/Camera_script.gd" id="8_crh0w"]
-[ext_resource type="PackedScene" uid="uid://ceq4ny3rxb57y" path="res://Scenes/Switch/Light_switch.tscn" id="8_vofx3"]
-[ext_resource type="Script" uid="uid://cjr0m7lhpqaaw" path="res://Scripts/GuiScripts/Gui.gd" id="9_ha31o"]
-[ext_resource type="PackedScene" uid="uid://ckjv184cin1d1" path="res://Scenes/Interact/Item.tscn" id="9_qxfql"]
-[ext_resource type="PackedScene" uid="uid://b5fhu0u18g00p" path="res://Scenes/Interact/Box.tscn" id="11_pa6b8"]
-[ext_resource type="Texture2D" uid="uid://buv8bxl5j7dhp" path="res://Assets/Item/Box/image (4).webp" id="13_nngtn"]
-[ext_resource type="PackedScene" uid="uid://143uwfw0ymrk" path="res://Scenes/Interact/door.tscn" id="13_pa6b8"]
-[ext_resource type="Texture2D" uid="uid://kthk54xq4sl3" path="res://Assets/Item/Box/image.webp" id="14_2klc5"]
-[ext_resource type="Texture2D" uid="uid://xfpwwdwvvlm" path="res://Assets/Item/Key/KeyRed.png" id="16_00k4y"]
-[ext_resource type="Texture2D" uid="uid://cs05x4wkv0sqx" path="res://Assets/Item/Key/KeyGreen.png" id="16_nngtn"]
-[ext_resource type="Texture2D" uid="uid://bmrqodohmguvd" path="res://Assets/Item/Box/image (2).webp" id="17_nngtn"]
-[ext_resource type="Texture2D" uid="uid://wd5yu26wib2" path="res://Assets/Item/Key/KeyPurple.png" id="18_3a44l"]
-[ext_resource type="Texture2D" uid="uid://csyth6vu4e7xn" path="res://Assets/Item/Box/image (3).webp" id="19_0cmrb"]
-[ext_resource type="Texture2D" uid="uid://cnfbq5funtjhd" path="res://Assets/Item/Key/KeyOrange.png" id="19_00k4y"]
-[ext_resource type="PackedScene" uid="uid://lhunmjjpu43q" path="res://Scenes/Switch/blocker.tscn" id="20_3a44l"]
-[ext_resource type="Texture2D" uid="uid://bmxo4e3orejf7" path="res://Assets/Item/RedKey.png" id="20_pnhnk"]
-[ext_resource type="Texture2D" uid="uid://bc7hnu55ynljp" path="res://Assets/Item/Box/image (1).webp" id="22_6y3s5"]
-[ext_resource type="Texture2D" uid="uid://bo4wi7wpem2dn" path="res://Assets/Item/Special/Hammer.png" id="26_bp4cd"]
-[ext_resource type="PackedScene" uid="uid://bpfqk5a8vfod5" path="res://Scenes/Interact/Machine.tscn" id="26_u0did"]
+[ext_resource type="Script" uid="uid://ckklj8718nab7" path="res://Scripts/LevelScripts/LevelName.gd" id="1_ys8ws"]
+[ext_resource type="Script" uid="uid://cjr0m7lhpqaaw" path="res://Scripts/GuiScripts/Gui.gd" id="2_uoegf"]
+[ext_resource type="Texture2D" uid="uid://bpibje1hbd5lv" path="res://Assets/TileAssets/DrveniPodovi.png" id="3_1iivn"]
+[ext_resource type="Texture2D" uid="uid://juvi04svfs4n" path="res://Assets/TileAssets/Zidovi.png" id="4_sfk2b"]
+[ext_resource type="Texture2D" uid="uid://dcrha5lateckf" path="res://Assets/TileAssets/DrugiPodovi.png" id="5_hgy28"]
+[ext_resource type="Texture2D" uid="uid://pr7b2j3wlh1a" path="res://Assets/TileAssets/Test.png" id="6_wl3kh"]
+[ext_resource type="Script" uid="uid://c320y13w205iv" path="res://Scripts/CameraScripts/Camera_script.gd" id="7_6y0s5"]
+[ext_resource type="Script" uid="uid://v0w8xmff0klu" path="res://Scripts/CharacterScripts/CharacterMovement.gd" id="8_yihsj"]
+[ext_resource type="Texture2D" uid="uid://b04kyohlxbp22" path="res://Assets/CharacterAssets/WalterWeiss.png" id="9_ygpw5"]
+[ext_resource type="PackedScene" uid="uid://143uwfw0ymrk" path="res://Scenes/Interact/door.tscn" id="10_f7j76"]
+[ext_resource type="PackedScene" uid="uid://lhunmjjpu43q" path="res://Scenes/Switch/blocker.tscn" id="11_ssheq"]
+[ext_resource type="PackedScene" uid="uid://b5fhu0u18g00p" path="res://Scenes/Interact/Box.tscn" id="12_su05j"]
+[ext_resource type="Texture2D" uid="uid://kthk54xq4sl3" path="res://Assets/Item/Box/image.webp" id="13_ih8ps"]
+[ext_resource type="PackedScene" uid="uid://ckjv184cin1d1" path="res://Scenes/Interact/Item.tscn" id="14_m8y2x"]
+[ext_resource type="Texture2D" uid="uid://cs05x4wkv0sqx" path="res://Assets/Item/Key/KeyGreen.png" id="15_qm3pd"]
+[ext_resource type="Texture2D" uid="uid://bmrqodohmguvd" path="res://Assets/Item/Box/image (2).webp" id="16_g3aax"]
+[ext_resource type="Texture2D" uid="uid://wd5yu26wib2" path="res://Assets/Item/Key/KeyPurple.png" id="17_lbekk"]
+[ext_resource type="Texture2D" uid="uid://csyth6vu4e7xn" path="res://Assets/Item/Box/image (3).webp" id="18_jasna"]
+[ext_resource type="Texture2D" uid="uid://bmxo4e3orejf7" path="res://Assets/Item/RedKey.png" id="19_hynxt"]
+[ext_resource type="Texture2D" uid="uid://bo4wi7wpem2dn" path="res://Assets/Item/Special/Hammer.png" id="20_fnhwx"]
+[ext_resource type="Texture2D" uid="uid://cnfbq5funtjhd" path="res://Assets/Item/Key/KeyOrange.png" id="21_3gwcl"]
+[ext_resource type="Texture2D" uid="uid://bc7hnu55ynljp" path="res://Assets/Item/Box/image (1).webp" id="22_jmcvt"]
+[ext_resource type="PackedScene" uid="uid://ceq4ny3rxb57y" path="res://Scenes/Switch/Light_switch.tscn" id="23_x6hvv"]
+[ext_resource type="Texture2D" uid="uid://buv8bxl5j7dhp" path="res://Assets/Item/Box/image (4).webp" id="24_t5mpo"]
+[ext_resource type="Texture2D" uid="uid://xfpwwdwvvlm" path="res://Assets/Item/Key/KeyRed.png" id="25_tml7c"]
+[ext_resource type="PackedScene" uid="uid://bpfqk5a8vfod5" path="res://Scenes/Interact/Machine.tscn" id="26_27i8q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_luodc"]
-texture = ExtResource("3_6y3s5")
+texture = ExtResource("3_1iivn")
 texture_region_size = Vector2i(32, 32)
 1:0/0 = 0
 2:0/0 = 0
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1cgv8"]
-texture = ExtResource("4_u0did")
+texture = ExtResource("4_sfk2b")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -67,14 +67,14 @@ texture_region_size = Vector2i(32, 32)
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hcs0j"]
-texture = ExtResource("5_53r2q")
+texture = ExtResource("5_hgy28")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_53r2q"]
-texture = ExtResource("6_u0did")
+texture = ExtResource("6_wl3kh")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
@@ -88,7 +88,7 @@ sources/28 = SubResource("TileSetAtlasSource_53r2q")
 tile_proxies/coords_level = [[0, Vector2i(0, 0)], [26, Vector2i(0, 0)], [1, Vector2i(0, 0)], [26, Vector2i(1, 0)], [2, Vector2i(0, 0)], [26, Vector2i(2, 0)], [8, Vector2i(0, 0)], [27, Vector2i(0, 0)], [9, Vector2i(0, 0)], [25, Vector2i(0, 0)], [10, Vector2i(0, 0)], [27, Vector2i(1, 0)], [11, Vector2i(0, 0)], [26, Vector2i(3, 0)], [12, Vector2i(0, 0)], [26, Vector2i(4, 0)], [13, Vector2i(0, 0)], [26, Vector2i(5, 0)], [14, Vector2i(0, 0)], [26, Vector2i(6, 0)], [15, Vector2i(0, 0)], [26, Vector2i(0, 1)], [16, Vector2i(0, 0)], [26, Vector2i(1, 1)], [17, Vector2i(0, 0)], [26, Vector2i(2, 1)], [18, Vector2i(0, 0)], [26, Vector2i(3, 1)], [19, Vector2i(0, 0)], [26, Vector2i(4, 1)], [20, Vector2i(0, 0)], [26, Vector2i(5, 1)], [21, Vector2i(0, 0)], [26, Vector2i(6, 1)], [22, Vector2i(0, 0)], [25, Vector2i(1, 0)], [23, Vector2i(0, 0)], [25, Vector2i(2, 0)], [24, Vector2i(0, 0)], [27, Vector2i(2, 0)]]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t205d"]
-texture = ExtResource("6_u0did")
+texture = ExtResource("6_wl3kh")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -108,10 +108,10 @@ size = Vector2(32, 32)
 size = Vector2(32, 32)
 
 [node name="Level" type="Node2D"]
-script = ExtResource("1_754fn")
+script = ExtResource("1_ys8ws")
 
 [node name="Gui" type="CanvasLayer" parent="."]
-script = ExtResource("9_ha31o")
+script = ExtResource("2_uoegf")
 
 [node name="InventoryItems" type="Label" parent="Gui"]
 anchors_preset = 10
@@ -140,14 +140,14 @@ tile_set = SubResource("TileSet_idpk0")
 position = Vector2(-24, 39)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
-script = ExtResource("8_crh0w")
+script = ExtResource("7_6y0s5")
 
 [node name="Character" type="CharacterBody2D" parent="."]
 position = Vector2(-24, 39)
-script = ExtResource("3_81xng")
+script = ExtResource("8_yihsj")
 
 [node name="Sprite2D" type="Sprite2D" parent="Character"]
-texture = ExtResource("4_wqkje")
+texture = ExtResource("9_ygpw5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
 shape = SubResource("RectangleShape2D_754fn")
@@ -163,129 +163,129 @@ shape = SubResource("RectangleShape2D_c7le1")
 position = Vector2(-32, 0)
 shape = SubResource("RectangleShape2D_qxfql")
 
-[node name="Door" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(112, 16)
 required_key = ""
 special_item = "Cekic"
 
-[node name="Door2" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door2" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(432, 400)
 required_key = ""
 special_item = "Cekic"
 
-[node name="Door3" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door3" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(432, 240)
 required_key = ""
 special_item = "Makaze"
 
-[node name="Door4" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door4" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(336, 304)
 required_key = "Key does not exist"
 
-[node name="Door5" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door5" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(112, 464)
 required_key = ""
 
-[node name="Door6" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door6" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(240, 400)
 required_key = "BrownKey"
 onesideddoor = true
 accessible_side = "bottom"
 
-[node name="Door7" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door7" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(112, 272)
 required_key = ""
 
-[node name="Door8" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door8" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(16, 240)
 required_key = ""
 
-[node name="Door9" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door9" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(336, 144)
 required_key = ""
 
-[node name="Door10" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door10" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(112, 80)
 required_key = ""
 
-[node name="Door11" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door11" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(48, 144)
 required_key = ""
 onesideddoor = true
 accessible_side = "bottom"
 
-[node name="Door12" parent="." instance=ExtResource("13_pa6b8")]
+[node name="Door12" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(-48, 144)
 required_key = ""
 
-[node name="blocker" parent="." instance=ExtResource("20_3a44l")]
+[node name="blocker" parent="." instance=ExtResource("11_ssheq")]
 position = Vector2(432, 266)
 
-[node name="GreenBox" parent="." instance=ExtResource("11_pa6b8")]
+[node name="GreenBox" parent="." instance=ExtResource("12_su05j")]
 position = Vector2(13, -16)
 required_key = "GreenKey"
 reward_item = "YellowKey"
-sprite = ExtResource("14_2klc5")
+sprite = ExtResource("13_ih8ps")
 
-[node name="GreenKey" parent="." instance=ExtResource("9_qxfql")]
+[node name="GreenKey" parent="." instance=ExtResource("14_m8y2x")]
 position = Vector2(290, 435)
 item_name = "GreenKey"
-sprite_texture = ExtResource("16_nngtn")
+sprite_texture = ExtResource("15_qm3pd")
 
-[node name="YellowBox" parent="." instance=ExtResource("11_pa6b8")]
+[node name="YellowBox" parent="." instance=ExtResource("12_su05j")]
 position = Vector2(282, -10)
 required_key = "YellowKey"
-sprite = ExtResource("17_nngtn")
+sprite = ExtResource("16_g3aax")
 
-[node name="PurpleKey" parent="." instance=ExtResource("9_qxfql")]
+[node name="PurpleKey" parent="." instance=ExtResource("14_m8y2x")]
 position = Vector2(-77, 79)
 item_name = "PurpleKey"
-sprite_texture = ExtResource("18_3a44l")
+sprite_texture = ExtResource("17_lbekk")
 
-[node name="PurpleBox" parent="." instance=ExtResource("11_pa6b8")]
+[node name="PurpleBox" parent="." instance=ExtResource("12_su05j")]
 position = Vector2(-80, 270)
 required_key = "PurpleKey"
 special_item = "Makaze"
-sprite = ExtResource("19_0cmrb")
+sprite = ExtResource("18_jasna")
 
-[node name="Makaze" parent="." instance=ExtResource("9_qxfql")]
+[node name="Makaze" parent="." instance=ExtResource("14_m8y2x")]
 position = Vector2(-81, 217)
 item_name = "Makaze"
-sprite_texture = ExtResource("20_pnhnk")
+sprite_texture = ExtResource("19_hynxt")
 
-[node name="Cekic" parent="." instance=ExtResource("9_qxfql")]
+[node name="Cekic" parent="." instance=ExtResource("14_m8y2x")]
 position = Vector2(62, 354)
 item_name = "Cekic"
-sprite_texture = ExtResource("26_bp4cd")
+sprite_texture = ExtResource("20_fnhwx")
 
-[node name="BrownKey" parent="." instance=ExtResource("9_qxfql")]
+[node name="BrownKey" parent="." instance=ExtResource("14_m8y2x")]
 position = Vector2(278, 90)
 item_name = "BrownKey"
-sprite_texture = ExtResource("19_00k4y")
+sprite_texture = ExtResource("21_3gwcl")
 
-[node name="BlueBox" parent="." instance=ExtResource("11_pa6b8")]
+[node name="BlueBox" parent="." instance=ExtResource("12_su05j")]
 position = Vector2(161, 350)
 required_key = "BlueKey"
-sprite = ExtResource("22_6y3s5")
+sprite = ExtResource("22_jmcvt")
 
-[node name="Box" parent="." instance=ExtResource("11_pa6b8")]
+[node name="Box" parent="." instance=ExtResource("12_su05j")]
 position = Vector2(166, 433)
 reward_item = "BlueKey"
-sprite = ExtResource("22_6y3s5")
+sprite = ExtResource("22_jmcvt")
 
-[node name="LightSwitch" parent="." instance=ExtResource("8_vofx3")]
+[node name="LightSwitch" parent="." instance=ExtResource("23_x6hvv")]
 position = Vector2(225, 449)
 blocker_path = NodePath("../blocker")
 
-[node name="RedBox" parent="." instance=ExtResource("11_pa6b8")]
+[node name="RedBox" parent="." instance=ExtResource("12_su05j")]
 position = Vector2(486, 463)
 required_key = "RedKey"
-sprite = ExtResource("13_nngtn")
+sprite = ExtResource("24_t5mpo")
 
-[node name="RedKey" parent="." instance=ExtResource("9_qxfql")]
+[node name="RedKey" parent="." instance=ExtResource("14_m8y2x")]
 position = Vector2(484, 322)
 item_name = "RedKey"
-sprite_texture = ExtResource("16_00k4y")
+sprite_texture = ExtResource("25_tml7c")
 
-[node name="Machine" parent="." instance=ExtResource("26_u0did")]
+[node name="Machine" parent="." instance=ExtResource("26_27i8q")]
 position = Vector2(-70, -11)
