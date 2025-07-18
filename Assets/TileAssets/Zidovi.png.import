@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://roi68miretwc"
-path="res://.godot/imported/WoodTileVert.png-b4b928ce007db079d964eb8137ab3832.ctex"
+uid="uid://juvi04svfs4n"
+path="res://.godot/imported/Zidovi.png-954a8d2280c32958dce2e8fdca14b51c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Item/Floor/WoodTileVert.png"
-dest_files=["res://.godot/imported/WoodTileVert.png-b4b928ce007db079d964eb8137ab3832.ctex"]
+source_file="res://Assets/TileAssets/Zidovi.png"
+dest_files=["res://.godot/imported/Zidovi.png-954a8d2280c32958dce2e8fdca14b51c.ctex"]
 
 [params]
 

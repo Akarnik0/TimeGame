@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds31mmtgub4m3"
-path="res://.godot/imported/WallWindow.png-6668d6fa56ffe986a49240556623729c.ctex"
+uid="uid://bpibje1hbd5lv"
+path="res://.godot/imported/DrveniPodovi.png-6224d1e77a93ed841764105081fd7ba9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Item/Wall/WallWindow.png"
-dest_files=["res://.godot/imported/WallWindow.png-6668d6fa56ffe986a49240556623729c.ctex"]
+source_file="res://Assets/TileAssets/DrveniPodovi.png"
+dest_files=["res://.godot/imported/DrveniPodovi.png-6224d1e77a93ed841764105081fd7ba9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deyo0gqqwdqki"
-path="res://.godot/imported/Wall.png-7dadd794b735cf21127620528f67615e.ctex"
+uid="uid://dcrha5lateckf"
+path="res://.godot/imported/DrugiPodovi.png-30efd39e3abd5d07f30976f1dc5c5f69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Item/Wall/Wall.png"
-dest_files=["res://.godot/imported/Wall.png-7dadd794b735cf21127620528f67615e.ctex"]
+source_file="res://Assets/TileAssets/DrugiPodovi.png"
+dest_files=["res://.godot/imported/DrugiPodovi.png-30efd39e3abd5d07f30976f1dc5c5f69.ctex"]
 
 [params]
 
