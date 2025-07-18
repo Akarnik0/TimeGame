@@ -12,6 +12,7 @@ grow_vertical = 2
 script = ExtResource("1_bxjjc")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
@@ -26,6 +27,7 @@ text = "Back"
 position = Vector2(20, 17)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = -157.0
 offset_top = -209.0
 offset_right = 215.0
