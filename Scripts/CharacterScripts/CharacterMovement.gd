@@ -139,7 +139,7 @@ func _unhandled_input(event: InputEvent):
 				Move(Direction)
 		if event.is_action_pressed("interact"):
 			for obj in interactables:
-				if obj.has_method("activate"):
+				if obj.has_method("activate") && obj.visible == true:
 					#SEKCIJA TESTIRANJA
 					#---------------------------------------------------------------------------
 					Character_interact.Interaction_turn_number.append(Character_movements.size()-1)
