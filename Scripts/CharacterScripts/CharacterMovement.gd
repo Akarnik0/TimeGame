@@ -20,6 +20,8 @@ var Inputs = {
 }
 #svi koraci koje je obavio karakter
 var Character_movements: Array[Vector2] = []
+#pravac u kojem je gledao dok je se kretao
+var Character_looks: Array[String] = []
 #SEKCIJA TESTIRANJA
 #---------------------------------------------------------------------------
 class Character_interactions:
@@ -41,6 +43,7 @@ func Start_going_back():
 func _On_go_back_step():
 	if Going_back_id >= 0:
 		position = Character_movements[Going_back_id]
+		change_sprite(Character_looks[Going_back_id])
 		#SEKCIJA TESTIRANJA
 		#---------------------------------------------------------------------------
 		for turn_number in range(Character_interact.Interaction_turn_number.size()):
@@ -70,17 +73,25 @@ func _On_go_back_step():
 		Character_interact.Interaction_item.clear()
 		#---------------------------------------------------------------------------
 		Character_movements.clear()
+		Character_movements.append(first_position)
+		Character_looks.clear()
+		Character_looks.append(first_looks)
 		GlobalLevel.Turns = 0
 		Going_back_timer.wait_time = 0.2
 		for item in inventory.duplicate():
 			if item != "gear":
 				inventory.erase(item)
 		Is_going_back = false
+var first_position
+var first_looks
 # Snap character to grid center
 func SnapCharacterToGrid():
 	var tile_size = $"../Grid".tile_set.tile_size.x
 	position = position.snapped(Vector2.ONE * tile_size) + Vector2.ONE * tile_size / 2
+	Character_looks.append("down")
+	first_looks = "down"
 	Character_movements.append(position)
+	first_position = position
 
 # Movement with collision check via RayCast2D
 func Move(Direction):
@@ -94,6 +105,7 @@ func Move(Direction):
 		position += Inputs[Direction] * tile_size
 		move_sfx.play()
 		Character_movements.append(position)
+		Character_looks.append(Direction)
 		if position != SameRoomPosition && IsInDoor == true:
 			GlobalLevel.Turns += 1
 			print("Turns: ",GlobalLevel.Turns)
@@ -128,6 +140,17 @@ func _ready():
 	Going_back_timer.connect("timeout", Callable(self, "_On_go_back_step"))
 	add_child(Going_back_timer)
 
+func change_sprite(dir:String):
+	match dir:
+		"right":
+			$Sprite2D.texture = load("res://Assets/CharacterAssets/LikE.webp")
+		"left":
+			$Sprite2D.texture = load("res://Assets/CharacterAssets/LikW.webp")
+		"up":
+			$Sprite2D.texture = load("res://Assets/CharacterAssets/LikN.webp")
+		"down":
+			$Sprite2D.texture = load("res://Assets/CharacterAssets/LikS.webp")
+
 # Handle input (arrow keys or WASD, if mapped in project settings)
 func _unhandled_input(event: InputEvent):
 	#sprijecava da se nesto unese dok se vraca vrijeme
@@ -136,6 +159,7 @@ func _unhandled_input(event: InputEvent):
 	else:
 		for Direction in Inputs.keys():
 			if event.is_action_pressed(Direction):
+				change_sprite(Direction)
 				Move(Direction)
 		if event.is_action_pressed("interact"):
 			for obj in interactables:
