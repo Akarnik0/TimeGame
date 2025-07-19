@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://143uwfw0ymrk"]
+[gd_scene load_steps=6 format=3 uid="uid://143uwfw0ymrk"]
 
 [ext_resource type="Script" uid="uid://b0px0kfop1d0s" path="res://Scripts/ItemScripts/door.gd" id="1_w6aom"]
 [ext_resource type="Texture2D" uid="uid://1beg754kyncm" path="res://Assets/Item/Door/Door.png" id="2_p0e35"]
+[ext_resource type="AudioStream" uid="uid://crtb7ecjye68u" path="res://SFX/World/DoorUnlock.mp3" id="3_68ntv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7j2x"]
 size = Vector2(28, 28)
@@ -13,6 +14,10 @@ size = Vector2(32, 32)
 script = ExtResource("1_w6aom")
 sprite = ExtResource("2_p0e35")
 required_key = "Nothing"
+
+[node name="DoorSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_68ntv")
+volume_db = 16.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 

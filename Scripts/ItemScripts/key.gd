@@ -2,6 +2,7 @@ extends Area2D
 
 @export var item_name: String
 @export var sprite_texture: Texture
+@onready var item_sfx = $ItemSFX
 var character
 
 func SnapKeyToGrid():
@@ -20,3 +21,4 @@ func activate(player):
 		visible = false
 		monitoring = false
 		monitorable = false
+		item_sfx.play()

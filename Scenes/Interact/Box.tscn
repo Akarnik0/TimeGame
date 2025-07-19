@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5fhu0u18g00p"]
+[gd_scene load_steps=4 format=3 uid="uid://b5fhu0u18g00p"]
 
 [ext_resource type="Script" uid="uid://cj140ucrxf7i0" path="res://Scripts/ItemScripts/box.gd" id="1_8s0t8"]
+[ext_resource type="AudioStream" uid="uid://csnouifr6w30r" path="res://SFX/Items/ItemPickupBetter.mp3" id="2_icfoj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42nxc"]
 
@@ -11,3 +12,6 @@ script = ExtResource("1_8s0t8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_42nxc")
+
+[node name="BoxSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_icfoj")

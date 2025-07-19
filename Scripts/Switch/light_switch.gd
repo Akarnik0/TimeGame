@@ -2,6 +2,7 @@ extends Area2D
 
 @export var sprite: Texture
 @export var blocker_path: NodePath
+@onready var flip_sfx = $FlipSFX
 
 var used = false
 
@@ -21,6 +22,7 @@ func activate(_player):
 	if used:
 		Global.log("This switch can’t be used again.")
 		return
+	flip_sfx.play()
 	
 	var blocker = get_node(blocker_path)
 

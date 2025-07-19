@@ -241,6 +241,7 @@ script = ExtResource("8_yihsj")
 [node name="MoveSFX" type="AudioStreamPlayer2D" parent="Character"]
 stream = ExtResource("16_su05j")
 volume_db = 15.0
+max_polyphony = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="Character"]
 texture = ExtResource("15_f7j76")

@@ -3,6 +3,7 @@ extends Area2D
 @export var required_key: String
 @export var special_item: String
 @export var reward_item: String = "gear"
+@onready var box_sfx = $BoxSFX
 @export var sprite: Texture
 
 func SnapBoxToGrid():
@@ -33,6 +34,7 @@ func activate(player):
 		player.add_item(reward_item)
 		Global.log("Opened a box")
 		GlobalLevel.Turns += 1
+		box_sfx.play()
 		if reward_item == "gear":
 			reward_item = ""
 		print("Turns: ", GlobalLevel.Turns)

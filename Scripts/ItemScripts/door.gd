@@ -5,6 +5,8 @@ extends Area2D
 @export var special_item: String = ""
 @export var onesideddoor: bool = false
 @export var accessible_side: String = ""
+@onready var door_sfx = $DoorSFX
+
 var character
 func _ready():
 	$Sprite2D.texture = sprite
@@ -28,6 +30,8 @@ func activate(player):
 
 	if blocked:
 		return
+	
+	door_sfx.play()
 
 	if required_key != "":
 		player.remove_item(required_key)

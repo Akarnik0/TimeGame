@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckjv184cin1d1"]
+[gd_scene load_steps=4 format=3 uid="uid://ckjv184cin1d1"]
 
 [ext_resource type="Script" uid="uid://c548xitrs2r5u" path="res://Scripts/ItemScripts/key.gd" id="1_og2wv"]
+[ext_resource type="AudioStream" uid="uid://cipb83nxu3tab" path="res://SFX/Items/KeyPickup.mp3" id="2_jhw4q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3td7"]
 
@@ -11,3 +12,6 @@ script = ExtResource("1_og2wv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_i3td7")
+
+[node name="ItemSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jhw4q")
