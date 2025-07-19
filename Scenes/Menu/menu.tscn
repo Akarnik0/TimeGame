@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhbnkmjgmli3w"]
+[gd_scene load_steps=4 format=3 uid="uid://dhbnkmjgmli3w"]
 
 [ext_resource type="Script" uid="uid://c3ugokqfyv2pt" path="res://Scripts/Menu/menu.gd" id="1_cqskg"]
+[ext_resource type="Theme" uid="uid://ckonnpch3ijr1" path="res://Assets/Buttons/ButtonStyle.tres" id="2_3ymnh"]
+[ext_resource type="Theme" uid="uid://bws3scay7gtup" path="res://Assets/Buttons/TitleStyle.tres" id="3_3qr6s"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -12,39 +14,51 @@ grow_vertical = 2
 script = ExtResource("1_cqskg")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 239.0
+offset_top = -91.0
+offset_right = 572.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_3ymnh")
 text = "Play"
 
 [node name="HowToPlay" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_3ymnh")
 text = "How to Play"
 
 [node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_3ymnh")
 text = "Credits"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_3ymnh")
 text = "Quit"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(48, 75)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 22.0
-offset_top = -46.0
-offset_right = 81.0
-offset_bottom = -14.0
-text = "Naslov"
+offset_left = 25.0
+offset_top = 28.0
+offset_right = 899.0
+offset_bottom = 208.0
+theme = ExtResource("3_3qr6s")
+text = "GLAVNI NASLOV:  PODNASLOV"
+scroll_active = false
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]

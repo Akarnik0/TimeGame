@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://ckonnpch3ijr1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k55dl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5py2c"]
+
+[resource]
+Button/colors/font_color = Color(0.545254, 1, 0.520402, 1)
+Button/colors/font_hover_color = Color(0.811351, 0, 0.451383, 1)
+Button/font_sizes/font_size = 32
+Button/icons/icon = null
+Button/styles/hover = SubResource("StyleBoxTexture_k55dl")
+Button/styles/normal = SubResource("StyleBoxTexture_5py2c")
