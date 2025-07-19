@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blpbpo6jhvg4r"
-path="res://.godot/imported/DoorHoriz.webp-4c1e28933774af0484aabddc2b7c0bfc.ctex"
+uid="uid://6g2cspgyal80"
+path="res://.godot/imported/DoorHorizBarbed.webp-f9d18e7559b6fa40762a40ef24f0bc0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LevelAssets/Doors/DoorHoriz.webp"
-dest_files=["res://.godot/imported/DoorHoriz.webp-4c1e28933774af0484aabddc2b7c0bfc.ctex"]
+source_file="res://Assets/Item/Door/DoorHorizBarbed.webp"
+dest_files=["res://.godot/imported/DoorHorizBarbed.webp-f9d18e7559b6fa40762a40ef24f0bc0a.ctex"]
 
 [params]
 

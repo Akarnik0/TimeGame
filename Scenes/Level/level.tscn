@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://cnx16dmfkhusg"]
+[gd_scene load_steps=57 format=4 uid="uid://cnx16dmfkhusg"]
 
 [ext_resource type="Script" uid="uid://ckklj8718nab7" path="res://Scripts/LevelScripts/LevelName.gd" id="1_ys8ws"]
 [ext_resource type="Script" uid="uid://cjr0m7lhpqaaw" path="res://Scripts/GuiScripts/Gui.gd" id="2_uoegf"]
@@ -19,23 +19,24 @@
 [ext_resource type="PackedScene" uid="uid://b5fhu0u18g00p" path="res://Scenes/Interact/Box.tscn" id="12_su05j"]
 [ext_resource type="Texture2D" uid="uid://kthk54xq4sl3" path="res://Assets/Item/Box/image.webp" id="13_ih8ps"]
 [ext_resource type="PackedScene" uid="uid://ckjv184cin1d1" path="res://Scenes/Interact/Item.tscn" id="14_m8y2x"]
-[ext_resource type="Texture2D" uid="uid://duxaaihdjk0o4" path="res://Assets/CharacterAssets/LikE.webp" id="15_6y0s5"]
+[ext_resource type="Texture2D" uid="uid://bouru63qe6muv" path="res://Assets/CharacterAssets/LikS.webp" id="15_f7j76"]
 [ext_resource type="Texture2D" uid="uid://cs05x4wkv0sqx" path="res://Assets/Item/Key/KeyGreen.png" id="15_qm3pd"]
 [ext_resource type="Texture2D" uid="uid://bmrqodohmguvd" path="res://Assets/Item/Box/image (2).webp" id="16_g3aax"]
+[ext_resource type="AudioStream" uid="uid://x2nv0tpgr6jb" path="res://SFX/Player/MoveSound.mp3" id="16_su05j"]
 [ext_resource type="Texture2D" uid="uid://wd5yu26wib2" path="res://Assets/Item/Key/KeyPurple.png" id="17_lbekk"]
 [ext_resource type="Texture2D" uid="uid://drqegvqui6icw" path="res://Assets/LevelAssets/Doors/DoorHorizLocked.webp" id="17_ssheq"]
-[ext_resource type="Texture2D" uid="uid://blpbpo6jhvg4r" path="res://Assets/LevelAssets/Doors/DoorHoriz.webp" id="17_yihsj"]
 [ext_resource type="Texture2D" uid="uid://csyth6vu4e7xn" path="res://Assets/Item/Box/image (3).webp" id="18_jasna"]
 [ext_resource type="Texture2D" uid="uid://dhdrl1wnf46rg" path="res://Assets/LevelAssets/Doors/DoorHorizBarbed.webp" id="18_su05j"]
-[ext_resource type="Texture2D" uid="uid://bmxo4e3orejf7" path="res://Assets/Item/RedKey.png" id="19_hynxt"]
 [ext_resource type="Texture2D" uid="uid://cqpeotr3b6xya" path="res://Assets/LevelAssets/Doors/DoorHorizPermalocked.webp" id="19_ih8ps"]
 [ext_resource type="Texture2D" uid="uid://bo4wi7wpem2dn" path="res://Assets/Item/Special/Hammer.png" id="20_fnhwx"]
+[ext_resource type="Texture2D" uid="uid://4t0vrwi31aa6" path="res://Assets/Item/Door/DoorHoriz.webp" id="20_ssheq"]
 [ext_resource type="Texture2D" uid="uid://cnfbq5funtjhd" path="res://Assets/Item/Key/KeyOrange.png" id="21_3gwcl"]
 [ext_resource type="Texture2D" uid="uid://bc7hnu55ynljp" path="res://Assets/Item/Box/image (1).webp" id="22_jmcvt"]
 [ext_resource type="PackedScene" uid="uid://ceq4ny3rxb57y" path="res://Scenes/Switch/Light_switch.tscn" id="23_x6hvv"]
 [ext_resource type="Texture2D" uid="uid://buv8bxl5j7dhp" path="res://Assets/Item/Box/image (4).webp" id="24_t5mpo"]
 [ext_resource type="Texture2D" uid="uid://xfpwwdwvvlm" path="res://Assets/Item/Key/KeyRed.png" id="25_tml7c"]
 [ext_resource type="PackedScene" uid="uid://bpfqk5a8vfod5" path="res://Scenes/Interact/Machine.tscn" id="26_27i8q"]
+[ext_resource type="Texture2D" uid="uid://bqkx3hk6skqnb" path="res://Assets/Item/Special/Klijesta.png" id="28_f7j76"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m8y2x"]
 texture = ExtResource("3_6y0s5")
@@ -237,8 +238,12 @@ script = ExtResource("7_6y0s5")
 position = Vector2(-24, 39)
 script = ExtResource("8_yihsj")
 
+[node name="MoveSFX" type="AudioStreamPlayer2D" parent="Character"]
+stream = ExtResource("16_su05j")
+volume_db = 15.0
+
 [node name="Sprite2D" type="Sprite2D" parent="Character"]
-texture = ExtResource("15_6y0s5")
+texture = ExtResource("15_f7j76")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
 shape = SubResource("RectangleShape2D_754fn")
@@ -279,7 +284,7 @@ required_key = "Key does not exist"
 
 [node name="Door5" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(112, 464)
-sprite = ExtResource("17_yihsj")
+sprite = ExtResource("20_ssheq")
 required_key = ""
 
 [node name="Door6" parent="." instance=ExtResource("10_f7j76")]
@@ -291,34 +296,34 @@ accessible_side = "bottom"
 
 [node name="Door7" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(112, 272)
-sprite = ExtResource("17_yihsj")
+sprite = ExtResource("20_ssheq")
 required_key = ""
 
 [node name="Door8" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(16, 240)
-sprite = ExtResource("17_yihsj")
+sprite = ExtResource("20_ssheq")
 required_key = ""
 
 [node name="Door9" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(336, 144)
-sprite = ExtResource("17_yihsj")
+sprite = ExtResource("20_ssheq")
 required_key = ""
 
 [node name="Door10" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(112, 80)
-sprite = ExtResource("17_yihsj")
+sprite = ExtResource("20_ssheq")
 required_key = ""
 
 [node name="Door11" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(48, 144)
-sprite = ExtResource("17_yihsj")
+sprite = ExtResource("20_ssheq")
 required_key = ""
 onesideddoor = true
 accessible_side = "bottom"
 
 [node name="Door12" parent="." instance=ExtResource("10_f7j76")]
 position = Vector2(-48, 144)
-sprite = ExtResource("17_yihsj")
+sprite = ExtResource("20_ssheq")
 required_key = ""
 
 [node name="blocker" parent="." instance=ExtResource("11_ssheq")]
@@ -354,7 +359,7 @@ sprite = ExtResource("18_jasna")
 [node name="Makaze" parent="." instance=ExtResource("14_m8y2x")]
 position = Vector2(-81, 217)
 item_name = "Makaze"
-sprite_texture = ExtResource("19_hynxt")
+sprite_texture = ExtResource("28_f7j76")
 
 [node name="Cekic" parent="." instance=ExtResource("14_m8y2x")]
 position = Vector2(62, 354)

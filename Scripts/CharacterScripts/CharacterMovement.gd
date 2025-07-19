@@ -4,6 +4,8 @@ var AllDoors = {}
 #varijabla u kojoj se cuvaju podaci o lokacijama vrata u levelu unutar jsona
 var Doors
 @onready var ray = $RayCast2D  # Make sure this RayCast2D node exists in the scene
+@onready var move_sfx = $MoveSFX
+
 
 var IsInDoor: bool
 var SameRoomPosition
@@ -90,6 +92,7 @@ func Move(Direction):
 	if !ray.is_colliding():
 		var LastPosition = position
 		position += Inputs[Direction] * tile_size
+		move_sfx.play()
 		Character_movements.append(position)
 		if position != SameRoomPosition && IsInDoor == true:
 			GlobalLevel.Turns += 1
