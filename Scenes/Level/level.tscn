@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://cnx16dmfkhusg"]
+[gd_scene load_steps=59 format=4 uid="uid://cnx16dmfkhusg"]
 
 [ext_resource type="Script" uid="uid://ckklj8718nab7" path="res://Scripts/LevelScripts/LevelName.gd" id="1_ys8ws"]
 [ext_resource type="Script" uid="uid://cjr0m7lhpqaaw" path="res://Scripts/GuiScripts/Gui.gd" id="2_uoegf"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cio18tnxntgnw" path="res://Assets/TileAssets/ZidProzor.png" id="12_ih8ps"]
 [ext_resource type="PackedScene" uid="uid://b5fhu0u18g00p" path="res://Scenes/Interact/Box.tscn" id="12_su05j"]
 [ext_resource type="Texture2D" uid="uid://kthk54xq4sl3" path="res://Assets/Item/Box/image.webp" id="13_ih8ps"]
+[ext_resource type="Texture2D" uid="uid://brsxp2lb1i5bv" path="res://Assets/TileAssets/StvariUSobama.png" id="13_m8y2x"]
 [ext_resource type="PackedScene" uid="uid://ckjv184cin1d1" path="res://Scenes/Interact/Item.tscn" id="14_m8y2x"]
 [ext_resource type="Texture2D" uid="uid://bouru63qe6muv" path="res://Assets/CharacterAssets/LikS.webp" id="15_f7j76"]
 [ext_resource type="Texture2D" uid="uid://cs05x4wkv0sqx" path="res://Assets/Item/Key/KeyGreen.png" id="15_qm3pd"]
@@ -182,6 +183,20 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6hvv"]
+texture = ExtResource("13_m8y2x")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_idpk0"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
@@ -189,6 +204,7 @@ sources/0 = SubResource("TileSetAtlasSource_t205d")
 sources/1 = SubResource("TileSetAtlasSource_fnhwx")
 sources/2 = SubResource("TileSetAtlasSource_3gwcl")
 sources/3 = SubResource("TileSetAtlasSource_jmcvt")
+sources/4 = SubResource("TileSetAtlasSource_x6hvv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_754fn"]
 size = Vector2(32, 32)
@@ -225,7 +241,7 @@ tile_map_data = PackedByteArray("AAD8//7/AgAAAAAAAAD8////AgABAAAAAAD8/wEABQAAAAA
 tile_set = SubResource("TileSet_0f350")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Grid"]
-tile_map_data = PackedByteArray("AAADAAEAAwAAAAAAADADAP//AQAAAAAAAAD9/wQAAQAAAAAAAGD//wQAAQAAAAAAAGAAAAQAAwAAAAAAAGACAAQAAQAAAAAAAGADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAADAAcAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAgAAQAAAAAAAAADAA0AAQAAAAAAAAADAAsAAQAAAAAAAAADAAwAAwAAAAAAADADAAoAAQAAAAAAAAADAAkAAQAAAAAAAAAKAAIAAQAAAAAAAAAKAAUAAQAAAAAAAAAKAAYAAQAAAAAAAAAKAAcAAwAAAAAAADAKAAgAAQAAAAAAAAAKAAoAAQAAAAAAAAAKAAsAAQAAAAAAAAAKAAwAAgAAAAAAAAAKAA4AAQAAAAAAAAAKAA0AAQAAAAAAAAALAAcAAQAAAAAAAGAMAAcAAQAAAAAAAGAOAAcAAQAAAAAAAGAPAAcAAQAAAAAAAGAEAAwAAQAAAAAAAGAFAAwAAQAAAAAAAGAGAAwAAQAAAAAAAGAIAAwAAQAAAAAAAGAJAAwAAQAAAAAAAGALAAwAAQAAAAAAAGAMAAwAAQAAAAAAAGAOAAwAAQAAAAAAAGAPAAwAAQAAAAAAAGADAAQAAwAAAAAAAAADAAMAAQAAAAAAAAAKAAMAAQAAAAAAAAAEAAEAAQAAAAAAAFAFAAEAAQAAAAAAAFAGAAEAAQAAAAAAAFAHAAEAAQAAAAAAAFAIAAEAAQAAAAAAAFAJAAEAAQAAAAAAAFA=")
+tile_map_data = PackedByteArray("AAADAAEAAwAAAAAAADADAP//AQAAAAAAAAD9/wQAAQAAAAAAAGD//wQAAQAAAAAAAGAAAAQAAwAAAAAAAGACAAQAAQAAAAAAAGADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAADAAcAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAgAAQAAAAAAAAADAA0AAQAAAAAAAAADAAsAAQAAAAAAAAADAAwAAwAAAAAAADADAAoAAQAAAAAAAAADAAkAAQAAAAAAAAAKAAIAAQAAAAAAAAAKAAUAAQAAAAAAAAAKAAYAAQAAAAAAAAAKAAcAAwAAAAAAADAKAAgAAQAAAAAAAAAKAAoAAQAAAAAAAAAKAAsAAQAAAAAAAAAKAAwAAgAAAAAAAAAKAA4AAQAAAAAAAAAKAA0AAQAAAAAAAAALAAcAAQAAAAAAAGAMAAcAAQAAAAAAAGAOAAcAAQAAAAAAAGAPAAcAAQAAAAAAAGAEAAwAAQAAAAAAAGAFAAwAAQAAAAAAAGAGAAwAAQAAAAAAAGAIAAwAAQAAAAAAAGAJAAwAAQAAAAAAAGALAAwAAQAAAAAAAGAMAAwAAQAAAAAAAGAOAAwAAQAAAAAAAGAPAAwAAQAAAAAAAGADAAQAAwAAAAAAAAADAAMAAQAAAAAAAAAKAAMAAQAAAAAAAAAEAAEAAQAAAAAAAFAFAAEAAQAAAAAAAFAGAAEAAQAAAAAAAFAHAAEAAQAAAAAAAFAIAAEAAQAAAAAAAFAJAAEAAQAAAAAAAFAEAAsABAAAAAAAAAAJAAsABAAAAAAAAAAEAAYABAAEAAEAAGAIAAcABAAEAAAAAFAIAAYABAADAAAAAFAGAAYABAACAAAAAAAGAAIABAAAAAAAAAALAAIABAAAAAEAAAAMAAIABAACAAEAAAANAAIABAACAAEAAAAOAAIABAABAAEAAAAPAAIABAACAAEAAAALAAsABAADAAEAAGALAAoABAADAAEAAGALAAgABAAAAAAAAAACAP//BAABAAAAAAA=")
 tile_set = SubResource("TileSet_idpk0")
 
 [node name="gameplay_camera" type="Camera2D" parent="."]
