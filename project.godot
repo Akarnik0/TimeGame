@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalLevel="*res://Scripts/LevelScripts/LevelName.gd"
 Global="*res://Scripts/GuiScripts/Global.gd"
+Global1="*res://Scripts/GuiScripts/Global1.gd"
 
 [input]
 

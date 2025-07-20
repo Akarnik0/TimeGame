@@ -44,7 +44,7 @@ func activate(player):
 	if special_item != "":
 		used_items.append(special_item)
 		GlobalLevel.Turns += 1
-		print("Turns: ", GlobalLevel.Turns)
+		Global1.log("Turns: " + str(GlobalLevel.Turns))
 	$StaticBody2D/CollisionShape2D.disabled = true
 	$".".visible = false
 	$".".monitoring = false

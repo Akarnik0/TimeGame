@@ -16,12 +16,17 @@ func _ready():
 
 func activate(player):
 
+	var missing = false
+
 	if required_key != "" and !player.has_item(required_key):
 		Global.log("Box is locked. Missing key: " + required_key)
-		return
+		missing = true
 
 	if special_item != "" and !player.has_item(special_item):
 		Global.log("Box needs a special item: " + special_item)
+		missing = true
+
+	if missing:
 		return
 
 	if required_key != "":
@@ -37,7 +42,7 @@ func activate(player):
 		box_sfx.play()
 		if reward_item == "gear":
 			reward_item = ""
-		print("Turns: ", GlobalLevel.Turns)
+		Global1.log("Turns: " + str(GlobalLevel.Turns))
 	$".".visible = false
 	$".".monitoring = false
 	$".".monitorable = false

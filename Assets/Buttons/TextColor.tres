@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://vikwci3ar8vp"]
+
+[resource]
+RichTextLabel/colors/default_color = Color(0, 0.596078, 0.556863, 1)
+RichTextLabel/font_sizes/normal_font_size = 30
+RichTextLabel/fonts/normal_font = null

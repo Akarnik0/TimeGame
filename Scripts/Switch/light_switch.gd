@@ -32,6 +32,6 @@ func activate(_player):
 		blocker.get_child(2).monitoring = false
 		blocker.get_child(2).monitorable = false
 		GlobalLevel.Turns += 1
-		print("Turns: ", GlobalLevel.Turns)
+		Global1.log("Turns: " + str(GlobalLevel.Turns))
 		Global.log("Light are now ON")
 		used = true

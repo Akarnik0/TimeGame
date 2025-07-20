@@ -77,6 +77,7 @@ func _On_go_back_step():
 		Character_looks.clear()
 		Character_looks.append(first_looks)
 		GlobalLevel.Turns = 0
+		Global1.log("Turns: " + str(GlobalLevel.Turns))
 		Going_back_timer.wait_time = 0.2
 		for item in inventory.duplicate():
 			if item != "gear":
@@ -108,7 +109,7 @@ func Move(Direction):
 		Character_looks.append(Direction)
 		if position != SameRoomPosition && IsInDoor == true:
 			GlobalLevel.Turns += 1
-			print("Turns: ",GlobalLevel.Turns)
+			Global1.log("Turns: " + str(GlobalLevel.Turns))
 			IsInDoor = false
 		else:
 			IsInDoor = false

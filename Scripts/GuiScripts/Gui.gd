@@ -5,6 +5,7 @@ var player
 func _ready():
 	player = get_node("/root/Level/Character")
 	Global.hud = self
+	Global1.hud1 = self
 
 func _process(_delta):
 	if player:
@@ -21,3 +22,15 @@ func log_message(new_message: String):
 		messages.pop_front()
 
 	message_log_label.text = "\n".join(messages)
+
+@onready var turns_label = $TurnsLabel
+const MAX_MESSAGES1 = 1
+var potezi: Array[String] = []
+
+func log_message1(new_message1: String):
+	potezi.append(new_message1)
+
+	if potezi.size() > MAX_MESSAGES1:
+		potezi.pop_front()
+
+	turns_label.text = "\n".join(potezi)

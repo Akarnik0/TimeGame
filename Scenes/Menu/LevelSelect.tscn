@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dv3e4wkn3m80d"]
+[gd_scene load_steps=5 format=3 uid="uid://dv3e4wkn3m80d"]
 
 [ext_resource type="Script" uid="uid://dob5otgigdet" path="res://Scripts/Menu/LevelSelect.gd" id="1_euj36"]
+[ext_resource type="Theme" uid="uid://ckonnpch3ijr1" path="res://Assets/Buttons/ButtonStyle.tres" id="2_yu1wm"]
+[ext_resource type="Theme" uid="uid://bws3scay7gtup" path="res://Assets/Buttons/TitleStyle.tres" id="3_liwsq"]
+[ext_resource type="Texture2D" uid="uid://b23xabg67nxi2" path="res://Assets/Backgrouns/TimeGameBG.png" id="4_liwsq"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -15,10 +18,10 @@ script = ExtResource("1_euj36")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = -154.0
-offset_top = -166.0
-offset_right = 219.0
-offset_bottom = 136.0
+offset_left = 404.0
+offset_top = 208.0
+offset_right = 777.0
+offset_bottom = 510.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -27,22 +30,30 @@ alignment = 1
 [node name="Level1" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
+theme = ExtResource("2_yu1wm")
 text = "Level 1"
 
 [node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_yu1wm")
 text = "Back"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(20, 17)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = -19.0
-offset_top = -198.0
-offset_right = 89.0
-offset_bottom = -168.0
+offset_left = 435.0
+offset_top = 106.0
+offset_right = 809.0
+offset_bottom = 191.0
+theme = ExtResource("3_liwsq")
 text = "Select a level"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_liwsq")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_button_pressed"]

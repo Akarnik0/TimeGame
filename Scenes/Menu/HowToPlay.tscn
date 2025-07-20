@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://kqef6fpmowd1"]
+[gd_scene load_steps=5 format=3 uid="uid://kqef6fpmowd1"]
 
 [ext_resource type="Script" uid="uid://dsuolssa2tim5" path="res://Scripts/Menu/HowToPlay.gd" id="1_bxjjc"]
+[ext_resource type="Theme" uid="uid://vikwci3ar8vp" path="res://Assets/Buttons/TextColor.tres" id="2_nrnb5"]
+[ext_resource type="Theme" uid="uid://ckonnpch3ijr1" path="res://Assets/Buttons/ButtonStyle.tres" id="2_s6vjn"]
+[ext_resource type="Texture2D" uid="uid://b23xabg67nxi2" path="res://Assets/Backgrouns/TimeGameBG.png" id="3_ll22n"]
 
 [node name="HowToPlay" type="Control"]
 layout_mode = 3
@@ -13,25 +16,58 @@ script = ExtResource("1_bxjjc")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 573.0
+offset_top = 313.0
+offset_right = 613.0
+offset_bottom = 353.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 177.0
+offset_top = -262.0
+offset_right = 1052.0
+offset_bottom = 175.0
+grow_vertical = 2
+theme = ExtResource("2_nrnb5")
+theme_override_font_sizes/normal_font_size = 17
+text = "The Game
+You are trapped in a small time loop, and your goal is to escape it by just getting the clock started.
+Each loop gives you a limited number of actions to perform.
+Your ultimate objective is to fix the clock that keeps you stuck in this loop by collecting four missing gears.
+Every time you find a gear, the clock gains more power, increasing the number of actions you can take per loop.
+Once you collect all four gears, the loop ends and you win.
+
+Mechanics
+Some items require you to spend an action to obtain, while others do not.
+There are four gears hidden throughout the house. Each gear you collect gives you three additional actions for every future loop.
+You start the game with three actions per loop.
+
+Controls
+WASD - Move
+E - Interact
+Space - Switch camera"
+
+[node name="Back" type="Button" parent="."]
 layout_mode = 2
+offset_left = 503.0
+offset_top = 533.0
+offset_right = 662.0
+offset_bottom = 616.0
+theme = ExtResource("2_s6vjn")
 text = "Back"
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(20, 17)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
 layout_mode = 0
-offset_left = -157.0
-offset_top = -209.0
-offset_right = 215.0
-offset_bottom = -25.0
-text = "Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,"
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("3_ll22n")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

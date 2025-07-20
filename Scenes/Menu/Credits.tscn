@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://0txgblv6c5be"]
+[gd_scene load_steps=5 format=3 uid="uid://0txgblv6c5be"]
 
 [ext_resource type="Script" uid="uid://c1myy75hy6hdj" path="res://Scripts/Menu/Credits.gd" id="1_6wcx4"]
+[ext_resource type="Theme" uid="uid://ckonnpch3ijr1" path="res://Assets/Buttons/ButtonStyle.tres" id="2_6p01r"]
+[ext_resource type="Theme" uid="uid://vikwci3ar8vp" path="res://Assets/Buttons/TextColor.tres" id="2_38lf1"]
+[ext_resource type="Texture2D" uid="uid://b23xabg67nxi2" path="res://Assets/Backgrouns/TimeGameBG.png" id="3_rc2un"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -13,25 +16,38 @@ script = ExtResource("1_6wcx4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = -157.0
-offset_top = -209.0
-offset_right = 215.0
-offset_bottom = -25.0
-text = "Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,Tekst,"
+offset_left = 216.0
+offset_top = 10.0
+offset_right = 960.0
+offset_bottom = 497.0
+theme = ExtResource("2_38lf1")
+text = "                         Game and level designer
+                                        Dice78
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+                                     Progamers
+                              Dice78 and Akarnik
+
+                         Music and sound effects 
+                                        Akarnik
+
+                                        Pixel art
+                            Wangers and Dice78"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 2
+offset_left = 506.0
+offset_top = 521.0
+offset_right = 680.0
+offset_bottom = 604.0
+theme = ExtResource("2_6p01r")
+text = "Back"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("3_rc2un")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Back"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(25, 14)
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
