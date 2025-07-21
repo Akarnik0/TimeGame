@@ -6,6 +6,7 @@ var TurnsMax: int = 3
 
 func _ready():
 	LevelName = "Level1"
+	Audio.play_music_game()
 
 var has_won := false
 

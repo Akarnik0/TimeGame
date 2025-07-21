@@ -16,6 +16,7 @@ script = ExtResource("1_0g4cs")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
@@ -23,10 +24,10 @@ texture = ExtResource("1_ckcfy")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 357.0
-offset_top = 345.0
-offset_right = 816.0
-offset_bottom = 466.0
+offset_left = 297.0
+offset_top = 327.0
+offset_right = 917.0
+offset_bottom = 448.0
 theme = ExtResource("3_5eujp")
 text = "Return to menu"
 

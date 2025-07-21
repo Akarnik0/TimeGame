@@ -6,6 +6,7 @@ extends Area2D
 @export var onesideddoor: bool = false
 @export var accessible_side: String = ""
 @onready var door_sfx = $DoorSFX
+@onready var door_locked = $DoorLocked
 
 var character
 func _ready():
@@ -29,6 +30,7 @@ func activate(player):
 		blocked = true
 
 	if blocked:
+		door_locked.play()
 		return
 	
 	door_sfx.play()

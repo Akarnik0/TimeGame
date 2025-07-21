@@ -32,10 +32,10 @@ anchor_bottom = 0.5
 offset_left = 177.0
 offset_top = -262.0
 offset_right = 1052.0
-offset_bottom = 175.0
+offset_bottom = 187.0
 grow_vertical = 2
 theme = ExtResource("2_nrnb5")
-theme_override_font_sizes/normal_font_size = 17
+theme_override_font_sizes/normal_font_size = 16
 text = "The Game
 You are trapped in a small time loop, and your goal is to escape it by just getting the clock started.
 Each loop gives you a limited number of actions to perform.
@@ -48,10 +48,13 @@ Some items require you to spend an action to obtain, while others do not.
 There are four gears hidden throughout the house. Each gear you collect gives you three additional actions for every future loop.
 You start the game with three actions per loop.
 
+Every time you: Enter a room, open a chest, destroy a chain or pedlock you spend one turn.
+
 Controls
 WASD - Move
 E - Interact
-Space - Switch camera"
+Space - Switch camera
+ESC - Back to menu"
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 2

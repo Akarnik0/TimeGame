@@ -5,6 +5,7 @@ extends Area2D
 @export var reward_item: String = "gear"
 @onready var box_sfx = $BoxSFX
 @export var sprite: Texture
+@onready var box_locked = $BoxLocked
 
 func SnapBoxToGrid():
 	var tile_size = $"../Grid".tile_set.tile_size.x
@@ -27,6 +28,7 @@ func activate(player):
 		missing = true
 
 	if missing:
+		box_locked.play()
 		return
 
 	if required_key != "":

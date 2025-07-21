@@ -1,4 +1,6 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://ckonnpch3ijr1"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://ckonnpch3ijr1"]
+
+[ext_resource type="FontFile" uid="uid://d0yw4n0ig0xuv" path="res://Assets/Fonts/Good Old DOS.ttf" id="1_k55dl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k55dl"]
 
@@ -7,7 +9,8 @@
 [resource]
 Button/colors/font_color = Color(1, 0.871419, 0.30756, 1)
 Button/colors/font_hover_color = Color(0.634114, 0.385864, 1.92523e-07, 1)
-Button/font_sizes/font_size = 60
+Button/font_sizes/font_size = 70
+Button/fonts/font = ExtResource("1_k55dl")
 Button/icons/icon = null
 Button/styles/hover = SubResource("StyleBoxTexture_k55dl")
 Button/styles/normal = SubResource("StyleBoxTexture_5py2c")

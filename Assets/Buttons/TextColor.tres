@@ -1,6 +1,8 @@
-[gd_resource type="Theme" format=3 uid="uid://vikwci3ar8vp"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://vikwci3ar8vp"]
+
+[ext_resource type="FontFile" uid="uid://d0yw4n0ig0xuv" path="res://Assets/Fonts/Good Old DOS.ttf" id="1_iwgq5"]
 
 [resource]
-RichTextLabel/colors/default_color = Color(0, 0.596078, 0.556863, 1)
+RichTextLabel/colors/default_color = Color(0, 0.772644, 0.722794, 1)
 RichTextLabel/font_sizes/normal_font_size = 30
-RichTextLabel/fonts/normal_font = null
+RichTextLabel/fonts/normal_font = ExtResource("1_iwgq5")

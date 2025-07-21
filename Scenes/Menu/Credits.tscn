@@ -17,7 +17,7 @@ script = ExtResource("1_6wcx4")
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 216.0
-offset_top = 10.0
+offset_top = 107.0
 offset_right = 960.0
 offset_bottom = 497.0
 theme = ExtResource("2_38lf1")
@@ -35,9 +35,9 @@ text = "                         Game and level designer
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 2
-offset_left = 506.0
+offset_left = 528.0
 offset_top = 521.0
-offset_right = 680.0
+offset_right = 722.0
 offset_bottom = 604.0
 theme = ExtResource("2_6p01r")
 text = "Back"

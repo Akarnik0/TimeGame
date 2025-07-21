@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5fhu0u18g00p"]
+[gd_scene load_steps=5 format=3 uid="uid://b5fhu0u18g00p"]
 
 [ext_resource type="Script" uid="uid://cj140ucrxf7i0" path="res://Scripts/ItemScripts/box.gd" id="1_8s0t8"]
 [ext_resource type="AudioStream" uid="uid://csnouifr6w30r" path="res://SFX/Items/ItemPickupBetter.mp3" id="2_icfoj"]
+[ext_resource type="AudioStream" uid="uid://c1pano4lsiret" path="res://SFX/Items/Locked.mp3" id="3_36y3g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42nxc"]
 
@@ -15,3 +16,8 @@ shape = SubResource("RectangleShape2D_42nxc")
 
 [node name="BoxSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_icfoj")
+volume_db = 5.0
+
+[node name="BoxLocked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_36y3g")
+volume_db = 5.0

@@ -5,6 +5,7 @@ var AllDoors = {}
 var Doors
 @onready var ray = $RayCast2D  # Make sure this RayCast2D node exists in the scene
 @onready var move_sfx = $MoveSFX
+@onready var backing_sfx = $BackingSFX
 
 
 var IsInDoor: bool
@@ -36,6 +37,7 @@ var Is_going_back = false
 var Going_back_id = 0
 var Going_back_timer := Timer.new()
 func Start_going_back():
+	backing_sfx.play()
 	if Character_movements.size() > 1:
 		Is_going_back = true
 		Going_back_id = Character_movements.size() - 1
@@ -77,6 +79,7 @@ func _On_go_back_step():
 		Character_looks.clear()
 		Character_looks.append(first_looks)
 		GlobalLevel.Turns = 0
+		backing_sfx.stop()
 		Global1.log("Turns: " + str(GlobalLevel.Turns))
 		Going_back_timer.wait_time = 0.2
 		for item in inventory.duplicate():
@@ -192,9 +195,6 @@ func GetDoorDataForLevel(LevelName: String):
 			LevelDoors.append(Vector2(Pair[0], Pair[1]))
 	return LevelDoors
 
-
-
-
 # Inventory
 var inventory: Array[String] = []
 var interactables: Array[Area2D] = []
@@ -223,3 +223,7 @@ func remove_item(item_name: String):
 	if item_name in inventory:
 		inventory.erase(item_name)
 		print("Removed item: ", item_name)
+
+func _input(event):
+	if event.is_action_pressed("Menu"):
+		get_tree().change_scene_to_file("res://Scenes/Menu/menu.tscn")

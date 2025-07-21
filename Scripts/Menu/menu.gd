@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+	Audio.play_music_menu()
+
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Menu/LevelSelect.tscn")
 
